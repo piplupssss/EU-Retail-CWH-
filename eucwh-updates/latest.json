@@ -1,0 +1,13 @@
+{
+  "latest_version": "VN54",
+  "release_time": "2026-07-01 15:56 CEST",
+  "package_url": "https://qitengliu.com/eucwh-updates/packages/VN54-EXE-Patch-20260701-1556.zip",
+  "sha256": "524ae0297cf7fb153d19cc0ef3bc0d61282c46ac0133a066d17ce797d79ab984",
+  "min_supported_version": "VN42",
+  "notes": [
+    "新增软件内自动检查版本更新。",
+    "只从 qitengliu.com 下载更新清单和补丁包，不上传任何业务数据。",
+    "下载后校验 SHA256，通过后启动升级器。",
+    "保留 VN53 的英文界面适配和 Product No 近期出入库清单优化。"
+  ]
+}
