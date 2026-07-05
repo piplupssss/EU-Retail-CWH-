@@ -1,16 +1,16 @@
 {
   "latest_version": "VN62",
   "release_time": "2026-07-05 21:55 CEST",
-  "package_url": "https://qitengliu.com/eucwh-updates/packages/VN62-EXE-Patch-20260705-2155.zip",
+  "package_url": "https://raw.githubusercontent.com/piplupssss/EU-Retail-CWH-/main/eucwh-updates/packages/VN62-EXE-Patch-20260705-2155.zip",
   "sha256": "6af8742ec7490f13dcaee93a37d41ab0ca621beab74531a4499eb54bc82795a8",
   "min_supported_version": "VN42",
   "notes": [
     "VN62 是大版本更新：数据管理中心按钮规范化，导入、上传、刷新统一红色，导出统一蓝色。",
     "数据管理中心按钮文案精简，删除“选择并”等多余字样，导出按钮统一显示为“导出”。",
     "版本信息页更新源展示改为“Qiteng的GitHub”，为后续 GitHub 自动更新通道做准备。",
-    "程序默认更新清单优先读取 GitHub raw 地址；如未登录电脑无法访问，则自动回退 qitengliu.com 镜像，避免更新中断。",
+    "程序默认更新清单读取 GitHub raw 地址；更新包也从 Qiteng 的 GitHub 仓库下载。",
     "自动更新安全说明同步更新：系统只发起 HTTPS GET 下载版本清单和补丁，不上传业务数据。",
-    "VN62 同步到 qitengliu.com demo，并准备 GitHub 更新清单备份。",
-    "VN62 是累计完整补丁，VN42 及之后版本可直接升级到当前最新版本。"
+    "VN62 是旧系统补丁通道当前最新版本，VN64 开始继续通过 GitHub 发布累计补丁。",
+    "VN63 是干净完整包基线，不通过旧系统补丁通道自动安装。"
   ]
 }

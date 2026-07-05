@@ -1,0 +1,22 @@
+{
+  "product": "EU Retail CWH System",
+  "channel": "full-package",
+  "latest_version": "VN63",
+  "release_time": "2026-07-06 00:22 CEST",
+  "package_name": "EUCWH-VN63-Engineering-Cleanup-20260706-0022.zip",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/eucwh-vn63-engineering-cleanup/EUCWH-VN63-Engineering-Cleanup-20260706-0022.zip",
+  "sha256": "c7dfb6d06cfe78a8b692ef2590e67b3618695145509d6ac22640ee3b1e8e2dfe",
+  "restore_inputs": [
+    "core_backup_no_images.xlsx",
+    "images"
+  ],
+  "notes": [
+    "VN63 Engineering Cleanup 是干净完整包基线，不作为旧系统自动补丁安装。",
+    "完整包内置 Windows Python 运行环境，同事电脑无需安装 Python。",
+    "完整包不包含业务数据库、物流源文件、发票源文件、图片或历史备份。",
+    "首次使用时，通过数据管理中心恢复 core_backup_no_images.xlsx 和 images 文件夹。",
+    "前端已拆分为 index.html、static/css/app.css、static/js/app.js，减少单文件屎山。",
+    "完整包经过安全瘦身，仅清理缓存和测试目录；保留 Playwright 等运行依赖，避免破坏批量核实能力。",
+    "VN64 开始再发布 GitHub 补丁包，旧版本自动更新不直接安装 VN63 完整包。"
+  ]
+}
