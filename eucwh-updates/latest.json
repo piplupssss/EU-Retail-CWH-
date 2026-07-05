@@ -1,16 +1,16 @@
 {
-  "latest_version": "VN61",
-  "release_time": "2026-07-05 20:17 CEST",
-  "package_url": "https://qitengliu.com/eucwh-updates/packages/VN61-EXE-Patch-20260705-2017.zip",
-  "sha256": "19e4f1d66cade2c82dbd9cf232cde7c7e2edfd9722da3c04a4b8551947d77889",
+  "latest_version": "VN62",
+  "release_time": "2026-07-05 21:55 CEST",
+  "package_url": "https://qitengliu.com/eucwh-updates/packages/VN62-EXE-Patch-20260705-2155.zip",
+  "sha256": "f493778d4b699bbbeab90c43a77f3a4414463a7abee76dfd5ecdd23afdf6da1b",
   "min_supported_version": "VN42",
   "notes": [
-    "VN61 是大版本更新：继续清理补丁式界面残留，收敛导航、看板、数据管理中心和库存分析体验。",
-    "进入系统后默认停留在物流看板，导航栏默认展开，首次打开会主动加载并重绘物流看板内容。",
-    "导航栏折叠交互优化：折叠状态只显示图标，鼠标移入可平滑展开完整导航。",
-    "移除空的系统设置入口，系统区域只保留版本信息。",
-    "完整包导出瘦身为 core_backup_no_images.xlsx 与 images 文件夹，减少重复 CSV、说明文件和额外校准副本。",
-    "库存看板移除右上角冗余仓库/刷新提示，并去掉库存结构分析中的“组合明细”重复表格。",
-    "VN61 是累计完整补丁，VN42 及之后版本可直接升级到当前最新版本。"
+    "VN62 是大版本更新：数据管理中心按钮规范化，导入、上传、刷新统一红色，导出统一蓝色。",
+    "数据管理中心按钮文案精简，删除“选择并”等多余字样，导出按钮统一显示为“导出”。",
+    "版本信息页更新源展示改为“Qiteng的GitHub”，为后续 GitHub 自动更新通道做准备。",
+    "程序默认更新清单切换到 GitHub raw 地址，并继续保留 qitengliu.com 更新包下载白名单作为过渡兜底。",
+    "自动更新安全说明同步更新：系统只发起 HTTPS GET 下载版本清单和补丁，不上传业务数据。",
+    "VN62 同步到 qitengliu.com demo，并准备 GitHub 更新清单备份。",
+    "VN62 是累计完整补丁，VN42 及之后版本可直接升级到当前最新版本。"
   ]
 }
