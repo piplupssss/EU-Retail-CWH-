@@ -1,16 +1,16 @@
 {
-  "latest_version": "VN62",
-  "release_time": "2026-07-05 21:55 CEST",
-  "package_url": "https://raw.githubusercontent.com/piplupssss/EU-Retail-CWH-/main/eucwh-updates/packages/VN62-EXE-Patch-20260705-2155.zip",
-  "sha256": "6af8742ec7490f13dcaee93a37d41ab0ca621beab74531a4499eb54bc82795a8",
+  "latest_version": "VN64",
+  "release_time": "2026-07-06 00:58 CEST",
+  "package_url": "https://raw.githubusercontent.com/piplupssss/EU-Retail-CWH-/main/eucwh-updates/packages/VN64-EXE-Patch-20260706-0058.zip",
+  "sha256": "f07d20701cd77f1ea8e13c6b838cdd4594598eac2797a550ab300434f169de9f",
   "min_supported_version": "VN42",
   "notes": [
-    "VN62 是大版本更新：数据管理中心按钮规范化，导入、上传、刷新统一红色，导出统一蓝色。",
-    "数据管理中心按钮文案精简，删除“选择并”等多余字样，导出按钮统一显示为“导出”。",
-    "版本信息页更新源展示改为“Qiteng的GitHub”，为后续 GitHub 自动更新通道做准备。",
-    "程序默认更新清单读取 GitHub raw 地址；更新包也从 Qiteng 的 GitHub 仓库下载。",
-    "自动更新安全说明同步更新：系统只发起 HTTPS GET 下载版本清单和补丁，不上传业务数据。",
-    "VN62 是旧系统补丁通道当前最新版本，VN64 开始继续通过 GitHub 发布累计补丁。",
-    "VN63 是干净完整包基线，不通过旧系统补丁通道自动安装。"
+    "修复 VN63 检查更新时误显示 VN62 的问题。",
+    "当前版本高于补丁通道时，系统显示“当前版本无需更新”，不再提示降级安装旧补丁。",
+    "更新检查接口增加 current_ahead_of_patch_channel、channel_label 和 status_message 字段。",
+    "VN64 是 GitHub 自动更新通道的第一版累计补丁，更新包从 Qiteng 的 GitHub raw 地址下载。",
+    "自动更新只通过 HTTPS GET 读取版本清单和下载补丁，不上传物流、库存、发票、图片、数据库或账号数据。",
+    "本补丁包含拆分后的 index.html、static/css/app.css、static/js/app.js。",
+    "VN64 是累计完整补丁，VN42 及之后版本可直接升级到当前最新版本。"
   ]
 }
