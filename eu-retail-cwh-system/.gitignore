@@ -1,0 +1,10 @@
+frontend/node_modules/
+frontend/dist/
+backend/app/data/*.db
+backend/app/data/*.db-*
+backend/app/data/uploads/*
+backend/app/data/backups/*
+backend/app/static/images/*
+backend/app/static/vue/assets/*.map
+.DS_Store
+

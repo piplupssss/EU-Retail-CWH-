@@ -1,0 +1,20 @@
+{
+  "product": "EU Retail CWH System",
+  "channel": "full-package",
+  "latest_version": "V1",
+  "release_time": "2026-07-05 23:22 CEST",
+  "package_name": "EU-Retail-CWH-System-V1-20260705-2322.zip",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/eu-retail-cwh-v1/EU-Retail-CWH-System-V1-20260705-2322.zip",
+  "sha256": "e7d90e4c46fee65231f8acd4ddc58b86b02d975c909dc24a7bcccf6b5f2c0dba",
+  "restore_inputs": [
+    "core_backup_no_images.xlsx",
+    "images"
+  ],
+  "notes": [
+    "EU Retail CWH System V1 是 Vue 重构后的第一版完整离线系统。",
+    "完整包内置 Windows Python 运行环境，同事电脑无需安装 Python。",
+    "完整包不包含业务数据库、物流源文件、发票源文件、图片或历史备份。",
+    "首次使用时，通过数据管理中心恢复 core_backup_no_images.xlsx 和 images 文件夹。",
+    "后续版本备份以 GitHub 发布包为准，软件包自身不再堆积历史备份。"
+  ]
+}

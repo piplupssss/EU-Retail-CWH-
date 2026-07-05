@@ -1,11 +1,29 @@
-# EU Retail CWH update feed
+# EU Retail CWH
 
-This folder is for the public read-only update feed mirrored to `https://qitengliu.com/eucwh-updates/`.
+This repository stores the source code, release manifests, and GitHub Release packages for **EU Retail CWH System**.
 
-Do not place business data, databases, invoices, images, core backups, or real Excel uploads here.
+The system is a local Windows warehouse and logistics management tool for European retail central warehouse operations. Business data is processed locally and must not be committed to this repository.
 
-Expected public paths:
+## Current tracks
 
-- `latest.json`
-- `packages/VNxx-EXE-Patch-*.zip`
-- `packages/VNxx-EXE-Patch-*.zip.sha256`
+- `eu-retail-cwh-system/` - clean Vue + Flask rebuild foundation.
+- `github_publish/` - update manifests and release metadata.
+- `tools/` - packaging and release helper scripts.
+- `docs/release-notes/` - version notes for released builds.
+
+## Data policy
+
+Do not commit:
+
+- uploaded supplier Excel files
+- invoices or PDFs
+- SQLite databases
+- inventory photos
+- `core_backup_no_images.xlsx`
+- customer or shipment business data
+
+Runtime data should stay on the user PC. Clean software packages are published through GitHub Releases.
+
+## Latest clean package
+
+The first clean rebuild package is published under the `eu-retail-cwh-v1` release.

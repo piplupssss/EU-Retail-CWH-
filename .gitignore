@@ -3,6 +3,21 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# EU Retail CWH runtime data and release packages
+**/node_modules/
+**/.vite/
+**/dist/
+**/*.db
+**/*.db-*
+eu-retail-cwh-system/backend/app/data/
+eu-retail-cwh-system/backend/app/static/images/
+*.zip
+*.sha256
+core_backup_no_images.xlsx
+images/
+uploads/
+backups/
+
 # C extensions
 *.so
 
