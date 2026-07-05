@@ -1,13 +1,16 @@
 {
-  "latest_version": "VN54",
-  "release_time": "2026-07-01 15:56 CEST",
-  "package_url": "https://qitengliu.com/eucwh-updates/packages/VN54-EXE-Patch-20260701-1556.zip",
-  "sha256": "524ae0297cf7fb153d19cc0ef3bc0d61282c46ac0133a066d17ce797d79ab984",
+  "latest_version": "VN61",
+  "release_time": "2026-07-05 20:17 CEST",
+  "package_url": "https://qitengliu.com/eucwh-updates/packages/VN61-EXE-Patch-20260705-2017.zip",
+  "sha256": "19e4f1d66cade2c82dbd9cf232cde7c7e2edfd9722da3c04a4b8551947d77889",
   "min_supported_version": "VN42",
   "notes": [
-    "新增软件内自动检查版本更新。",
-    "只从 qitengliu.com 下载更新清单和补丁包，不上传任何业务数据。",
-    "下载后校验 SHA256，通过后启动升级器。",
-    "保留 VN53 的英文界面适配和 Product No 近期出入库清单优化。"
+    "VN61 是大版本更新：继续清理补丁式界面残留，收敛导航、看板、数据管理中心和库存分析体验。",
+    "进入系统后默认停留在物流看板，导航栏默认展开，首次打开会主动加载并重绘物流看板内容。",
+    "导航栏折叠交互优化：折叠状态只显示图标，鼠标移入可平滑展开完整导航。",
+    "移除空的系统设置入口，系统区域只保留版本信息。",
+    "完整包导出瘦身为 core_backup_no_images.xlsx 与 images 文件夹，减少重复 CSV、说明文件和额外校准副本。",
+    "库存看板移除右上角冗余仓库/刷新提示，并去掉库存结构分析中的“组合明细”重复表格。",
+    "VN61 是累计完整补丁，VN42 及之后版本可直接升级到当前最新版本。"
   ]
 }
