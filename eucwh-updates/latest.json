@@ -1,14 +1,15 @@
 {
   "latest_version": "VN66",
   "release_time": "2026-07-09 10:10 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN66/VN66_update.zip",
-  "sha256": "3a89eabceda051237a9e847c20161d5f3c889a921497f8904790d2744597faa2",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN66/VN66-EXE-Patch-20260709-compat.zip",
+  "sha256": "633e1f509b3dce931037c2fdcb47a1c228d156200bf4e4acf5de4bf305e739d9",
   "min_supported_version": "VN42",
   "notes": [
     "导出文件名统一缩短并做 Windows 安全字符处理：物流、库存、出入流水、验收、底层备份、完整包和报告导出不再把长筛选条件塞进文件名，避免文件名过长导致打不开。",
     "前端下载层默认优先使用短 fallback 文件名，同时后端 Excel/ZIP 响应也会清洗和截断下载文件名。",
     "出入流水清单继续向库存清单表格标准对齐：固定行高，收窄 Product No 列，放宽 Product Description 列。",
     "出入流水清单的物料品类改为普通文本显示，不再使用状态标签颜色，减少和库存清单的视觉差异。",
-    "保留现有导入、导出内容字段、校准、备份、图片匹配和数据库逻辑不变。"
+    "保留现有导入、导出内容字段、校准、备份、图片匹配和数据库逻辑不变。",
+    "修复 VN66 自动更新包目录结构，避免 patch files are missing。"
   ]
 }
