@@ -1,16 +1,14 @@
 {
-  "latest_version": "VN67",
-  "release_time": "2026-07-10 09:59 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN67/VN67-EXE-Patch-20260710-0959.zip",
-  "sha256": "2ddb9c595351f082b62c8f784447f59648c1edb372de939f0ba488de45502d9e",
+  "latest_version": "VN68",
+  "release_time": "2026-07-10 10:46 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN68/VN68-EXE-Patch-20260710-1046.zip",
+  "sha256": "ac4547f34047cad2d06bdde7d52ddf298398a808816e3dfb4eac232bb7140764",
   "notes": [
-    "数据管理中心导入/导出按钮语义统一：导入、刷新、上传类动作为红色，导出类动作为蓝色，减少按钮语义混乱。",
-    "数据管理中心按钮文案继续压缩，删除“选择并”等多余字样，导出按钮统一显示为“导出”。",
-    "四个清单的空状态开始统一为同一套表格状态样式，减少“暂无数据/加载中”显示风格不一致。",
-    "出入流水清单继续向库存清单对齐：Product No 列收窄，Product Description 列保留更合理宽度。",
-    "库存清单副标题精简为“点击 Product No 查看 SKU 详情”。",
-    "发票数据管理入口文案调整，“生成明细”改为“导入发票”，与自动识别并输出明细的流程更一致。",
-    "保留现有导入、导出内容字段、校准、备份、图片匹配、自动更新和数据库逻辑不变。"
+    "修复升级后首次进入页面仍短暂显示 VN65 的问题：HTML 与语言文件的兜底版本号同步更新为 VN68。",
+    "修复版本纪要空白问题：版本信息页面同时兼容 changes 与 items 两种纪要字段。",
+    "补齐 VN65、VN66、VN67 的 items 纪要字段，历史版本记录不再显示为空白。",
+    "发布链路继续使用 Qiteng 的 GitHub raw latest.json 作为自动更新源。",
+    "保留现有导入、导出、校准、备份、图片匹配、自动更新安装和数据库业务逻辑不变。"
   ],
   "min_supported_version": "VN42"
 }
