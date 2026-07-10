@@ -1,15 +1,16 @@
 {
-  "latest_version": "VN66",
-  "release_time": "2026-07-09 10:10 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN66/VN66-EXE-Patch-20260709-compat.zip",
-  "sha256": "633e1f509b3dce931037c2fdcb47a1c228d156200bf4e4acf5de4bf305e739d9",
-  "min_supported_version": "VN42",
+  "latest_version": "VN67",
+  "release_time": "2026-07-10 09:59 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN67/VN67-EXE-Patch-20260710-0959.zip",
+  "sha256": "2ddb9c595351f082b62c8f784447f59648c1edb372de939f0ba488de45502d9e",
   "notes": [
-    "导出文件名统一缩短并做 Windows 安全字符处理：物流、库存、出入流水、验收、底层备份、完整包和报告导出不再把长筛选条件塞进文件名，避免文件名过长导致打不开。",
-    "前端下载层默认优先使用短 fallback 文件名，同时后端 Excel/ZIP 响应也会清洗和截断下载文件名。",
-    "出入流水清单继续向库存清单表格标准对齐：固定行高，收窄 Product No 列，放宽 Product Description 列。",
-    "出入流水清单的物料品类改为普通文本显示，不再使用状态标签颜色，减少和库存清单的视觉差异。",
-    "保留现有导入、导出内容字段、校准、备份、图片匹配和数据库逻辑不变。",
-    "修复 VN66 自动更新包目录结构，避免 patch files are missing。"
-  ]
+    "数据管理中心导入/导出按钮语义统一：导入、刷新、上传类动作为红色，导出类动作为蓝色，减少按钮语义混乱。",
+    "数据管理中心按钮文案继续压缩，删除“选择并”等多余字样，导出按钮统一显示为“导出”。",
+    "四个清单的空状态开始统一为同一套表格状态样式，减少“暂无数据/加载中”显示风格不一致。",
+    "出入流水清单继续向库存清单对齐：Product No 列收窄，Product Description 列保留更合理宽度。",
+    "库存清单副标题精简为“点击 Product No 查看 SKU 详情”。",
+    "发票数据管理入口文案调整，“生成明细”改为“导入发票”，与自动识别并输出明细的流程更一致。",
+    "保留现有导入、导出内容字段、校准、备份、图片匹配、自动更新和数据库逻辑不变。"
+  ],
+  "min_supported_version": "VN42"
 }
