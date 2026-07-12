@@ -1,15 +1,13 @@
 {
-  "latest_version": "VN69",
-  "release_time": "2026-07-10 13:38 CEST",
-  "package_url": "https://raw.githubusercontent.com/piplupssss/EU-Retail-CWH-/main/eucwh-updates/packages/VN69-EXE-Patch-20260710-1338.zip",
-  "sha256": "ec2925f280f261de367599f1461b82bc19faae293df5b1ba40b66f38c13c9827",
+  "latest_version": "VN70",
+  "release_time": "2026-07-12 19:39 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN70/VN70-EXE-Patch-20260712-1939.zip",
+  "sha256": "ed6f7140311147e1af1dcc09cc2739a6358c36c41c946859f48c0132403cd37b",
   "notes": [
-    "系统级回传校准统一收敛到 core backup：数据迁移、恢复和回传不再使用库存校准 Excel 作为日常入口。",
-    "数据管理中心去掉源文件管理可见入口，默认只保留已读取后的结构化数据，减少源文件堆积和重复维护。",
-    "一键瘦身选项重新收敛为源文件缓存、库存图片/库存基础数据、历史备份/旧补丁三类，并保护当前主 EXE 与 stop_system.bat 不被删除。",
-    "库存、物流和出入流水 Excel 导出统一字体、表头、行高和 Product Description 自动换行，并为库存和物流导出增加 Summary sheet。",
-    "修复库存清单 PDF、HTML、PNG 长图导出失效问题；PDF 继续走浏览器打印/另存为 PDF 流程。",
-    "库存导出提示改为系统级回传、迁移、恢复统一使用数据管理中心导出的 core backup。",
-    "保留现有数据库结构、图片匹配、物流人工状态保护、发票验收、备份恢复和自动更新安装逻辑不变。"
+    "修复 SKU 手动维护图片上传读取错误字段的问题，编辑后的 BOM Code 现在会正确传给图片匹配接口。",
+    "统一图片替换、Product No 回退匹配和文件名规范化逻辑，忽略大小写、空格、下划线、连字符及常见特殊符号。",
+    "保留替换图片后清理旧文件的逻辑，避免完整包中出现同一 SKU 的旧图片和新图片。",
+    "图片上传失败时保留明确提示，图片上传成功后刷新 Product No 详情和库存清单。",
+    "保留现有数据库、库存数量、物流人工状态、Excel 导入导出、备份恢复和自动更新逻辑不变。"
   ]
 }
