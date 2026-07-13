@@ -1,12 +1,11 @@
 {
-  "latest_version": "VN76",
-  "release_time": "2026-07-13 17:02 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN76/VN76_update.zip",
-  "sha256": "d0191f36ed7c15424ff70423a33c9503db550664fd27ae8bb5ffe77449922e9a",
+  "latest_version": "VN77",
+  "release_time": "2026-07-13 17:24 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN77/VN77_update.zip",
+  "sha256": "ee1af69bbab492fef5ae4e769a15e4b099d29f62ab34b17bd1761928825b47e6",
   "notes": [
-    "修复 Lodz 发货模板上传显示 unauthorized：上传现在走系统统一登录请求，自动携带当前登录令牌。",
-    "入库管理的到货清单统一为清单交互：点击到货编号直接编辑；首列支持多选和全选。",
-    "勾选同一仓库的多个到货编号可合并生成一封到货通知；Lodz 自动生成给 Aga，Bydgoszcz 自动生成给 Piotr。混选两个仓库时会提示分别生成，避免收件人和仓库混淆。",
-    "编辑到货登记可以修改仓库、日期、参考号、备注和物料明细；只维护到货资料与 SKU 主数据，不会修改实际库存。"
+    "修复保存 Lodz 发货批次后下载 Packing List 显示 unauthorized：下载现在走统一的已登录文件下载通道。",
+    "常用地址模板下载和 SKU 图片上传同步接入统一认证请求，避免新建文件操作遗漏登录令牌。",
+    "发布前新增认证请求检查：前端若直接绕开统一认证通道访问业务 API，版本包将停止生成并提示修复位置。"
   ]
 }
