@@ -1,13 +1,16 @@
 {
-  "latest_version": "VN70",
-  "release_time": "2026-07-12 19:39 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN70/VN70-EXE-Patch-20260712-1939.zip",
-  "sha256": "ed6f7140311147e1af1dcc09cc2739a6358c36c41c946859f48c0132403cd37b",
+  "latest_version": "VN71",
+  "release_time": "2026-07-13 09:11 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN71/VN71-EXE-Patch-20260713-0911.zip",
+  "sha256": "7e31d14684ba0505f516453dcb681ef94034f688ee5d83859b4fa1d313378951",
   "notes": [
-    "修复 SKU 手动维护图片上传读取错误字段的问题，编辑后的 BOM Code 现在会正确传给图片匹配接口。",
-    "统一图片替换、Product No 回退匹配和文件名规范化逻辑，忽略大小写、空格、下划线、连字符及常见特殊符号。",
-    "保留替换图片后清理旧文件的逻辑，避免完整包中出现同一 SKU 的旧图片和新图片。",
-    "图片上传失败时保留明确提示，图片上传成功后刷新 Product No 详情和库存清单。",
-    "保留现有数据库、库存数量、物流人工状态、Excel 导入导出、备份恢复和自动更新逻辑不变。"
+    "新增发货管理核心闭环：以一条 Todo 表示一笔独立需求，可先记录自然语言物料描述，再从库存中选择 Product No 和数量。",
+    "新增需求地址簿与国家联动选择，常用地址可复用 Party ID、收货人、地址和联系方式，不必每单重复录入。",
+    "需求编号支持点击查看、编辑和删除；选品过程直接打开库存选择器与 Product No 详情，减少在库存清单和发货管理之间来回切换。",
+    "支持同一 Todo 按仓库形成子订单：Lodz 生成 Aga 下单信息，Bydgoszcz 生成 Piotr 邮件信息，并保留一个订单只对应一个仓库的规则。",
+    "仓库回复 STT / Booking 后才生成预计库存占用；实际库存仍以供应商最新 Stock List 静默覆盖，不由发货 Todo 直接扣减。",
+    "STT 物流状态变为已交付后自动闭环对应子订单和 Todo；同时保留手动维护、替换 STT 和异常处理入口。",
+    "重新编译 VN71 Windows 升级器与主启动器，累计补丁包含 app_root 启动器并继续排除数据库、图片和上传文件。",
+    "保留现有库存、物流、发票、Excel 导入导出、图片匹配、完整包备份恢复和 GitHub 自动更新逻辑。"
   ]
 }
