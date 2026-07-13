@@ -1,13 +1,12 @@
 {
-  "latest_version": "VN72",
-  "release_time": "2026-07-13 11:03 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN72/VN72_update.zip",
-  "sha256": "c4284d1cbed5163eac7e41294a9c9bc52758b2bad86d8722376a62062ccb5652",
+  "latest_version": "VN73",
+  "release_time": "2026-07-13 12:38 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN73/VN73_update.zip",
+  "sha256": "7982846e11f860fca47a805af064b8c28fb3229304fbde9483b648989d781167",
   "notes": [
-    "新增独立入库管理页面：到货登记从发货管理中移出，登记到货仓库、日期、参考号和物料明细后，可直接生成给 Aga 的入库通知。",
-    "到货登记不会修改实际库存；库存数量仍只由供应商周度 Stock List 或完整包恢复更新，避免把到货通知误当作库存快照。",
-    "发货管理保留需求 Todo、仓库发货资料、常用地址维护和历史 Lodz 发货单导入，发货与入库职责不再混在同一页。",
-    "新增统一发布脚本：自动编译带 CWH 图标的启动器和升级器，检查版本纪要、累计补丁结构、SHA256、GitHub Release 和 raw latest.json。",
-    "发布失败会在任一步停止；更新包继续不包含数据库、图片、上传源文件或业务备份。"
+    "到货登记的物料品类、适用产品和归属国家改为从现有库存自动扫描的下拉选项，减少手工输入导致的分类不一致。",
+    "给 Aga 的到货通知去除仓库和到货日期重复信息，物料明细统一以 Product No、描述、分类、数量和归属国家表格呈现。",
+    "常用地址导入和筛选支持中文国家名、英文国家名、两位国家代码及混合写法；已导入的旧地址会自动标准化为国家代码，无需重新录入。",
+    "到货登记仍只生成入库通知，不会直接修改库存数量；实际库存继续以供应商周度 Stock List 或完整包恢复为准。"
   ]
 }
