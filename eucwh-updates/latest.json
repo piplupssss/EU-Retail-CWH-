@@ -2,7 +2,7 @@
   "latest_version": "VN80",
   "release_time": "2026-07-13 17:41 CEST",
   "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN80/VN80_update.zip",
-  "sha256": "145c7c6f30602f3caab50b4e4120af84f3619030cc2a7f9b0bca2e42b249dbf1",
+  "sha256": "f6ed591e3017b051409e525928845f33190ce9fabf5284fe825f03b8aa7fbd5a",
   "notes": [
     "到货通知物料表格中的 Category 和 Category 2 改为首字母大写显示，避免全大写影响邮件可读性。",
     "仅调整通知展示，不修改库存原始分类值、筛选逻辑或数据匹配。",
