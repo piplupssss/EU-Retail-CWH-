@@ -2,7 +2,7 @@
   "latest_version": "VN72",
   "release_time": "2026-07-13 11:03 CEST",
   "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN72/VN72_update.zip",
-  "sha256": "4eee49f58839bbd4b1e8a1d0b6754da5ee68cc376e1aeca56cb8eecb2b1f7bd9",
+  "sha256": "c4284d1cbed5163eac7e41294a9c9bc52758b2bad86d8722376a62062ccb5652",
   "notes": [
     "新增独立入库管理页面：到货登记从发货管理中移出，登记到货仓库、日期、参考号和物料明细后，可直接生成给 Aga 的入库通知。",
     "到货登记不会修改实际库存；库存数量仍只由供应商周度 Stock List 或完整包恢复更新，避免把到货通知误当作库存快照。",
