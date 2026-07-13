@@ -1,11 +1,11 @@
 {
-  "latest_version": "VN80",
-  "release_time": "2026-07-13 17:41 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN80/VN80_update.zip",
-  "sha256": "f6ed591e3017b051409e525928845f33190ce9fabf5284fe825f03b8aa7fbd5a",
+  "latest_version": "VN81",
+  "release_time": "2026-07-13 17:53 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN81/VN81_update.zip",
+  "sha256": "aa6fff1e20967176e15e01ccddcbbfc6ed0ef967fa40414faf6175512e4dbf39",
   "notes": [
-    "到货通知物料表格中的 Category 和 Category 2 改为首字母大写显示，避免全大写影响邮件可读性。",
-    "仅调整通知展示，不修改库存原始分类值、筛选逻辑或数据匹配。",
-    "累计包含 VN79 的通知签名清理与 VN78 的到货图片回显修复。"
+    "修复登录界面和版本信息页仍显示 VN71 的问题：页面启动时先读取 release_info.json，再进行登录鉴权。",
+    "登录页、顶部栏和版本信息卡片的离线兜底版本同步为 VN81。",
+    "发布前新增版本展示一致性校验；若任何登录或版本页兜底文字仍是旧版本，更新包将拒绝生成。"
   ]
 }
