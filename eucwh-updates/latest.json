@@ -1,12 +1,13 @@
 {
-  "latest_version": "VN73",
-  "release_time": "2026-07-13 12:38 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN73/VN73_update.zip",
-  "sha256": "7982846e11f860fca47a805af064b8c28fb3229304fbde9483b648989d781167",
+  "latest_version": "VN74",
+  "release_time": "2026-07-13 14:35 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN74/VN74_update.zip",
+  "sha256": "9a2f198516770fe34099a9b9ea6aed4e21a59fb090d51c0197a8f46c6ce9affa",
   "notes": [
-    "到货登记的物料品类、适用产品和归属国家改为从现有库存自动扫描的下拉选项，减少手工输入导致的分类不一致。",
-    "给 Aga 的到货通知去除仓库和到货日期重复信息，物料明细统一以 Product No、描述、分类、数量和归属国家表格呈现。",
-    "常用地址导入和筛选支持中文国家名、英文国家名、两位国家代码及混合写法；已导入的旧地址会自动标准化为国家代码，无需重新录入。",
-    "到货登记仍只生成入库通知，不会直接修改库存数量；实际库存继续以供应商周度 Stock List 或完整包恢复为准。"
+    "到货登记新增 BOM Code、Instruction、单价和图片：有 BOM Code 时自动生成 Instruction_BOM Code 形式的 Product No；BOM Code 为本地或空时，BOM Code 统一保存为 /，并允许独立填写 Product No。",
+    "到货登记保存时只预登记 SKU 主数据和图片映射，不修改仓库实际库存；库存数量继续以供应商 Stock List 或完整包恢复为唯一准则。",
+    "图片命名和匹配统一为：有效 BOM Code 优先，BOM Code 为 / 或为空时按 Product No；图片替换会清理未被引用的旧文件，避免备份后出现同一 SKU 的多张有效图片。",
+    "完整包的 images 现在按全部 SKU 主数据映射收集，即使 SKU 暂时库存为零或尚未出现在周度库存表中，已维护图片也会被保留。",
+    "SKU 手动维护增加 Instruction 下拉选择；切换到另一 SKU 时会清空上一 SKU 的图片选择提示，保存后的成功提示保持在最上层可见。"
   ]
 }
