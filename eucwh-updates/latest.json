@@ -2,7 +2,7 @@
   "latest_version": "VN71",
   "release_time": "2026-07-13 09:11 CEST",
   "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN71/VN71-EXE-Patch-20260713-0911.zip",
-  "sha256": "7e31d14684ba0505f516453dcb681ef94034f688ee5d83859b4fa1d313378951",
+  "sha256": "3395a9e4c6882dfe859a1a05b9371d356b43ce5c85ab2d2ecf04e49718dc6afa",
   "notes": [
     "新增发货管理核心闭环：以一条 Todo 表示一笔独立需求，可先记录自然语言物料描述，再从库存中选择 Product No 和数量。",
     "新增需求地址簿与国家联动选择，常用地址可复用 Party ID、收货人、地址和联系方式，不必每单重复录入。",
