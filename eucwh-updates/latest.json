@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN82",
-  "release_time": "2026-07-13 18:02 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN82/VN82_update.zip",
-  "sha256": "d8758c03eb23e2c52d4be732275e7a77eb55a4040a64308a78dec56ebade1889",
+  "latest_version": "VN83",
+  "release_time": "2026-07-13 18:28 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN83/VN83_update.zip",
+  "sha256": "d001ed2e219cfdb47d8638c862db0db20ccfe6a2c94aadf13b107988ba44b87f",
   "notes": [
-    "左侧导航新增“出入库管理”分组，集中发货管理、入库管理和出入流水；发货管理与入库管理均标记为 LIVE。",
-    "需求 Todo 已有仓库子订单时，操作按钮明确显示“查看 / 回传 STT”；进入需求详情后可对每个子订单录入或更换 STT / Booking，并核对最终 SKU 与数量。",
-    "STT 回传继续沿用既有业务规则：仅在收到 Aga / Piotr 回复后才建立预计占用；实际库存仍以供应商 Stock List 和月度流水为准。",
-    "左侧导航每个业务入口改为不同图标，避免发货、入库、物流和数据管理视觉混淆。"
+    "发货管理中点击 Order Number 现在直接打开订单详情；生成仓库子订单、录入或更换 STT / Booking、取消子订单和国家通知都集中在此入口。",
+    "新增“生成国家通知”：STT 录入后可在子订单内预览运输中通知，包含追踪链接、预计到货、收货信息、Product No、图片、描述、数量、USD 单价和总价。",
+    "国家通知支持复制为可粘贴到邮件的表格，并通过浏览器打印窗口导出 PDF；不会自动发送邮件或上传任何业务数据。",
+    "通知商品信息来自当前库存主数据；如物流清单已导入同一 STT，自动带入对应运输记录中的预计交付信息。"
   ]
 }
