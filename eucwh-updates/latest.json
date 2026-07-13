@@ -1,11 +1,12 @@
 {
-  "latest_version": "VN81",
-  "release_time": "2026-07-13 17:53 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN81/VN81_update.zip",
-  "sha256": "aa6fff1e20967176e15e01ccddcbbfc6ed0ef967fa40414faf6175512e4dbf39",
+  "latest_version": "VN82",
+  "release_time": "2026-07-13 18:02 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN82/VN82_update.zip",
+  "sha256": "d8758c03eb23e2c52d4be732275e7a77eb55a4040a64308a78dec56ebade1889",
   "notes": [
-    "修复登录界面和版本信息页仍显示 VN71 的问题：页面启动时先读取 release_info.json，再进行登录鉴权。",
-    "登录页、顶部栏和版本信息卡片的离线兜底版本同步为 VN81。",
-    "发布前新增版本展示一致性校验；若任何登录或版本页兜底文字仍是旧版本，更新包将拒绝生成。"
+    "左侧导航新增“出入库管理”分组，集中发货管理、入库管理和出入流水；发货管理与入库管理均标记为 LIVE。",
+    "需求 Todo 已有仓库子订单时，操作按钮明确显示“查看 / 回传 STT”；进入需求详情后可对每个子订单录入或更换 STT / Booking，并核对最终 SKU 与数量。",
+    "STT 回传继续沿用既有业务规则：仅在收到 Aga / Piotr 回复后才建立预计占用；实际库存仍以供应商 Stock List 和月度流水为准。",
+    "左侧导航每个业务入口改为不同图标，避免发货、入库、物流和数据管理视觉混淆。"
   ]
 }
