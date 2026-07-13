@@ -1,11 +1,11 @@
 {
-  "latest_version": "VN77",
-  "release_time": "2026-07-13 17:24 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN77/VN77_update.zip",
-  "sha256": "ee1af69bbab492fef5ae4e769a15e4b099d29f62ab34b17bd1761928825b47e6",
+  "latest_version": "VN78",
+  "release_time": "2026-07-13 17:33 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN78/VN78_update.zip",
+  "sha256": "c94b86289d52a115c4130957242e5a8fbf505f08c99f83e1877fbe23672bd64a",
   "notes": [
-    "修复保存 Lodz 发货批次后下载 Packing List 显示 unauthorized：下载现在走统一的已登录文件下载通道。",
-    "常用地址模板下载和 SKU 图片上传同步接入统一认证请求，避免新建文件操作遗漏登录令牌。",
-    "发布前新增认证请求检查：前端若直接绕开统一认证通道访问业务 API，版本包将停止生成并提示修复位置。"
+    "修复到货登记重新打开后图片显示为未上传的问题：已保存图片会回显缩略图和已上传状态。",
+    "到货登记编辑时可点击已上传缩略图查看大图；只有重新选择文件才会替换原图片。",
+    "图片仍按现有 BOM Code 优先、无 BOM 时 Product No 的规则保存，不改变库存数量或周度库存刷新逻辑。"
   ]
 }
