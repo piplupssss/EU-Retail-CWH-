@@ -1,13 +1,13 @@
 {
-  "latest_version": "VN74",
-  "release_time": "2026-07-13 14:35 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN74/VN74_update.zip",
-  "sha256": "9a2f198516770fe34099a9b9ea6aed4e21a59fb090d51c0197a8f46c6ce9affa",
+  "latest_version": "VN75",
+  "release_time": "2026-07-13 16:20 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN75/VN75_update.zip",
+  "sha256": "98766ba7a16137db2ab131061455a953387b1c03736fa49e0a44bdd671c89516",
   "notes": [
-    "到货登记新增 BOM Code、Instruction、单价和图片：有 BOM Code 时自动生成 Instruction_BOM Code 形式的 Product No；BOM Code 为本地或空时，BOM Code 统一保存为 /，并允许独立填写 Product No。",
-    "到货登记保存时只预登记 SKU 主数据和图片映射，不修改仓库实际库存；库存数量继续以供应商 Stock List 或完整包恢复为唯一准则。",
-    "图片命名和匹配统一为：有效 BOM Code 优先，BOM Code 为 / 或为空时按 Product No；图片替换会清理未被引用的旧文件，避免备份后出现同一 SKU 的多张有效图片。",
-    "完整包的 images 现在按全部 SKU 主数据映射收集，即使 SKU 暂时库存为零或尚未出现在周度库存表中，已维护图片也会被保留。",
-    "SKU 手动维护增加 Instruction 下拉选择；切换到另一 SKU 时会清空上一 SKU 的图片选择提示，保存后的成功提示保持在最上层可见。"
+    "仓库发货资料现在分别提供复制主题和复制邮件内容：邮件内容以可直接粘贴到 Outlook 等邮件客户端的 HTML 表格生成，Lodz / Aga 与 Bydgoszcz / Piotr 都保留各自所需字段。",
+    "发货管理新增一次性上传 Lodz 空白发货模板：保存 Lodz 批次后自动下载 Packing List，文件名为 PL 月份 日期；只写入 A、B、D、E、Y、AA、AB、AC、AR 指定列，B 固定 N、AB 固定 PCE、AR 固定 PL_L_DHL_E_ESI，其他列、隐藏列、公式和 Sheet 保持原样。",
+    "Lodz 模板上传接口兼容当前和旧版页面字段，避免已打开页面在升级后出现已选文件却提示未选择模板。",
+    "到货登记的 Instruction 选项仅展示当前库存中已存在的归属国家；确有新归属国家时可选择新增后手动填写。",
+    "发货需求的需求国家和收货国家按代表处分组展示，便于选择并保留需求国与实际收货国不同的业务场景。"
   ]
 }
