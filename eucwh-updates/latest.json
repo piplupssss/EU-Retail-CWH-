@@ -1,16 +1,13 @@
 {
-  "latest_version": "VN71",
-  "release_time": "2026-07-13 09:11 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN71/VN71-EXE-Patch-20260713-0911.zip",
-  "sha256": "3395a9e4c6882dfe859a1a05b9371d356b43ce5c85ab2d2ecf04e49718dc6afa",
+  "latest_version": "VN72",
+  "release_time": "2026-07-13 11:03 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN72/VN72_update.zip",
+  "sha256": "1c8828273491a8f49a48b0f172a6c4768ed4f19c2ff9284c13bf168ba2a8efc9",
   "notes": [
-    "新增发货管理核心闭环：以一条 Todo 表示一笔独立需求，可先记录自然语言物料描述，再从库存中选择 Product No 和数量。",
-    "新增需求地址簿与国家联动选择，常用地址可复用 Party ID、收货人、地址和联系方式，不必每单重复录入。",
-    "需求编号支持点击查看、编辑和删除；选品过程直接打开库存选择器与 Product No 详情，减少在库存清单和发货管理之间来回切换。",
-    "支持同一 Todo 按仓库形成子订单：Lodz 生成 Aga 下单信息，Bydgoszcz 生成 Piotr 邮件信息，并保留一个订单只对应一个仓库的规则。",
-    "仓库回复 STT / Booking 后才生成预计库存占用；实际库存仍以供应商最新 Stock List 静默覆盖，不由发货 Todo 直接扣减。",
-    "STT 物流状态变为已交付后自动闭环对应子订单和 Todo；同时保留手动维护、替换 STT 和异常处理入口。",
-    "重新编译 VN71 Windows 升级器与主启动器，累计补丁包含 app_root 启动器并继续排除数据库、图片和上传文件。",
-    "保留现有库存、物流、发票、Excel 导入导出、图片匹配、完整包备份恢复和 GitHub 自动更新逻辑。"
+    "新增独立入库管理页面：到货登记从发货管理中移出，登记到货仓库、日期、参考号和物料明细后，可直接生成给 Aga 的入库通知。",
+    "到货登记不会修改实际库存；库存数量仍只由供应商周度 Stock List 或完整包恢复更新，避免把到货通知误当作库存快照。",
+    "发货管理保留需求 Todo、仓库发货资料、常用地址维护和历史 Lodz 发货单导入，发货与入库职责不再混在同一页。",
+    "新增统一发布脚本：自动编译带 CWH 图标的启动器和升级器，检查版本纪要、累计补丁结构、SHA256、GitHub Release 和 raw latest.json。",
+    "发布失败会在任一步停止；更新包继续不包含数据库、图片、上传源文件或业务备份。"
   ]
 }
