@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN83",
-  "release_time": "2026-07-13 18:28 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN83/VN83_update.zip",
-  "sha256": "d001ed2e219cfdb47d8638c862db0db20ccfe6a2c94aadf13b107988ba44b87f",
+  "latest_version": "VN84",
+  "release_time": "2026-07-13 19:09 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN84/VN84_update.zip",
+  "sha256": "ede1234fb38047701e99c2369ed49bdc228b0f1569253d10ebaca569092dc11a",
   "notes": [
-    "发货管理中点击 Order Number 现在直接打开订单详情；生成仓库子订单、录入或更换 STT / Booking、取消子订单和国家通知都集中在此入口。",
-    "新增“生成国家通知”：STT 录入后可在子订单内预览运输中通知，包含追踪链接、预计到货、收货信息、Product No、图片、描述、数量、USD 单价和总价。",
-    "国家通知支持复制为可粘贴到邮件的表格，并通过浏览器打印窗口导出 PDF；不会自动发送邮件或上传任何业务数据。",
-    "通知商品信息来自当前库存主数据；如物流清单已导入同一 STT，自动带入对应运输记录中的预计交付信息。"
+    "生成国家通知前，系统会用已录入的 STT / Booking 查询 DSV 公开追踪页；即使物流 Excel 尚未导入，也会尝试取得最新 ETA、重量、体积和运输状态。",
+    "公开追踪结果仅用于通知预览：不会新增物流清单记录、不会覆盖人工维护的物流状态、不会扣减库存。",
+    "如 DSV 公开页面出现验证码、限流或无结果，国家通知会自动回退到已导入物流信息或需求中的手动预计到货日期。",
+    "国家通知继续保留中英双语、追踪链接、需求描述和物料明细；只向 DSV 公开追踪页发送 STT / Booking，不上传库存、地址、图片或业务数据库。"
   ]
 }
