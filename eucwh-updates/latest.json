@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN90",
-  "release_time": "2026-07-14 17:49 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN90/VN90_update.zip",
-  "sha256": "3da675c25e92c819b7764985250e64efb631f0af2f5052afb834300d9fb8a565",
+  "latest_version": "VN91",
+  "release_time": "2026-07-14 18:08 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN91/VN91_update.zip",
+  "sha256": "3bd892ee666b6d7c1346e7ade43e1a94c3df387f52125ffccc4d236cb095ef87",
   "notes": [
-    "需求 Todo 新增普通单 Standard 与急单 Premium；旧需求自动按普通单处理。",
-    "普通单与急单可勾选后合并生成同一封仓库邮件；混合场景的邮件主题标注 <Mixed>。",
-    "Aga 与 Piotr 的 Outlook 邮件正文表格都会按每个 Order Number 标注 Standard 或 Premium，Premium 明确表示急单。",
-    "服务等级始终以需求 Todo 为准，生成邮件时不可临时改写；不改变库存、STT、物流、Excel 模板或任何本地业务数据。"
+    "普通单与急单可合并成同一封仓库邮件；Premium 订单自动排在前面，混合邮件主题标注 <Mixed>。",
+    "Outlook 邮件和预览中的 Premium 服务等级使用红色标注，并明确提醒仓库优先处理。",
+    "缺少 Party ID 的订单会在发货明细表上方单独列出，包含 Order Number、收货国家、联系人、电话和完整地址，供仓库创建 Party ID。",
+    "Lodz Packing List 的主 Sheet 自动按下单日期改名，例如 July 5；邮件末尾统一加入 Thank you。"
   ]
 }
