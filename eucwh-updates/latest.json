@@ -1,11 +1,12 @@
 {
-  "latest_version": "VN86",
-  "release_time": "2026-07-14 12:05 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN86/VN86_update.zip",
-  "sha256": "d1ac2900eed383a9c81b67898c092ca028701658404d4723029a4b391810f1ae",
+  "latest_version": "VN87",
+  "release_time": "2026-07-14 12:47 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN87/VN87_update.zip",
+  "sha256": "012b5d92f0fb365530c6fc67b1e477696ae11d3416a84151e0707120f410393f",
   "notes": [
-    "回传 STT / Booking 时可录入 Aga 或 Piotr 反馈的初步 ETA，便于物流网站尚未返回追踪结果时先完成内部跟进。",
-    "生成国家通知时自动优先使用 DSV 公开追踪或已导入物流中的最新 ETA；只有网站暂无 ETA 时才回退显示仓库反馈的初步 ETA。",
-    "初步 ETA 独立保存于仓库订单，可在后续修改 STT / 最终数量时更新或清空，不改变库存数量、预计占用或原始期望到货日期。"
+    "入库管理改为与出库管理一致的到货清单：支持搜索、状态筛选、统一排序、批量通知和点击到货编号查看详情。",
+    "到货登记支持取消：取消后保留到货编号、物料与图片历史，不参与通知，也不改动实际库存快照。",
+    "已取消到货可重新打开并恢复保存，避免填写错误时只能删除或重建。",
+    "库存仍以供应商周度 Stock List 为准；本次不改变库存计算、图片匹配、Excel 导入导出或业务数据。"
   ]
 }
