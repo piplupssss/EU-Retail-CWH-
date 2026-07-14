@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN84",
-  "release_time": "2026-07-13 19:09 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN84/VN84_update.zip",
-  "sha256": "ede1234fb38047701e99c2369ed49bdc228b0f1569253d10ebaca569092dc11a",
+  "latest_version": "VN85",
+  "release_time": "2026-07-14 08:55 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN85/VN85_update.zip",
+  "sha256": "df94579f4d4e76ac33f405f2597589179a0e283107fe398a10f9b3d154c6f96c",
   "notes": [
-    "生成国家通知前，系统会用已录入的 STT / Booking 查询 DSV 公开追踪页；即使物流 Excel 尚未导入，也会尝试取得最新 ETA、重量、体积和运输状态。",
-    "公开追踪结果仅用于通知预览：不会新增物流清单记录、不会覆盖人工维护的物流状态、不会扣减库存。",
-    "如 DSV 公开页面出现验证码、限流或无结果，国家通知会自动回退到已导入物流信息或需求中的手动预计到货日期。",
-    "国家通知继续保留中英双语、追踪链接、需求描述和物料明细；只向 DSV 公开追踪页发送 STT / Booking，不上传库存、地址、图片或业务数据库。"
+    "发货订单详情移除重复的需求物料、内部仓库订单号和重复 STT 展示，订单信息改为以实际 Order Number 为主键。",
+    "需求信息改为与国家通知一致的九宫格布局：地址占用更宽区域，仓库反馈只保留仓库、状态、SKU 与需求/确认数量。",
+    "国家通知预览合并重量与体积，并移除邮件正文复制入口，保留可直接下载的双语 PDF。",
+    "不改变库存扣减、STT 回传、物流状态保护、Excel 模板和本地业务数据处理规则。"
   ]
 }
