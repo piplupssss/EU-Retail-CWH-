@@ -1,12 +1,11 @@
 {
-  "latest_version": "VN92",
-  "release_time": "2026-07-14 19:02 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN92/VN92_update.zip",
-  "sha256": "3a5a89dc48d441efdc04c67a5701f37d899161201502eadd81634f3d152361bb",
+  "latest_version": "VN93",
+  "release_time": "2026-07-14 19:35 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN93/VN93_update.zip",
+  "sha256": "d5fb10ee35164fb8fc4cc7bf24a9460e34bc5d1a3829cc1f8772b06f954fdd40",
   "notes": [
-    "批量创建仓库邮件后，系统同步创建对应的仓库反馈记录；打开任一 Order Number 会进入“仓库反馈”，可回传数量和 STT / Booking。旧邮件批次首次打开时也会自动补齐。",
-    "订单详情不再展示“期望到货”字段；Req. Ship Date 始终独立按下单日期后 1 个工作日自动计算。",
-    "仓库邮件统一以 Please help to arrange 开头；Premium 订单置顶并整行红色显示，缺少 Party ID 的联系人、电话和地址另列于主订单表后。",
-    "仓库邮件正文末尾统一加入 Thank you。"
+    "需求 Todo 不再显示 Req. Ship Date；其位置统一为服务等级。Req. Ship Date 继续在后台按下单日期后 1 个工作日自动计算，并用于仓库邮件和 Packing List。",
+    "国家通知的 Pickup Date / 发货日期优先显示公开追踪或已导入物流中的实际 pickup_date；尚未识别实际提货时，才回退为系统默认 Req. Ship Date。",
+    "公开追踪补充识别 Pickup Date，继续仅查询公开 STT / Booking 页面，不上传库存、地址、图片、数据库或其他业务数据。"
   ]
 }
