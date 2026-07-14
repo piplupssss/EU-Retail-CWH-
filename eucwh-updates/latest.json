@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN89",
-  "release_time": "2026-07-14 17:36 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN89/VN89_update.zip",
-  "sha256": "147bd17fa9e166ba8494dffc0b4313c5f77ab52d4f238945bb999b930b970426",
+  "latest_version": "VN90",
+  "release_time": "2026-07-14 17:49 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN90/VN90_update.zip",
+  "sha256": "3da675c25e92c819b7764985250e64efb631f0af2f5052afb834300d9fb8a565",
   "notes": [
     "需求 Todo 新增普通单 Standard 与急单 Premium；旧需求自动按普通单处理。",
-    "仓库邮件主题会按需求服务等级自动标注 <Standard> 或 <Premium>，不再允许在生成邮件时临时改写。",
-    "批量选择混合需求时，系统自动将普通单与急单分成独立仓库邮件和汇总表；生成第一封 Outlook 草稿后自动切换至下一组。",
-    "后端增加服务等级校验，避免普通单与急单被误合并；不改变库存、STT、物流、Excel 模板或任何本地业务数据。"
+    "普通单与急单可勾选后合并生成同一封仓库邮件；混合场景的邮件主题标注 <Mixed>。",
+    "Aga 与 Piotr 的 Outlook 邮件正文表格都会按每个 Order Number 标注 Standard 或 Premium，Premium 明确表示急单。",
+    "服务等级始终以需求 Todo 为准，生成邮件时不可临时改写；不改变库存、STT、物流、Excel 模板或任何本地业务数据。"
   ]
 }
