@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN91",
-  "release_time": "2026-07-14 18:08 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN91/VN91_update.zip",
-  "sha256": "3bd892ee666b6d7c1346e7ade43e1a94c3df387f52125ffccc4d236cb095ef87",
+  "latest_version": "VN92",
+  "release_time": "2026-07-14 19:02 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN92/VN92_update.zip",
+  "sha256": "3a5a89dc48d441efdc04c67a5701f37d899161201502eadd81634f3d152361bb",
   "notes": [
-    "普通单与急单可合并成同一封仓库邮件；Premium 订单自动排在前面，混合邮件主题标注 <Mixed>。",
-    "Outlook 邮件和预览中的 Premium 服务等级使用红色标注，并明确提醒仓库优先处理。",
-    "缺少 Party ID 的订单会在发货明细表上方单独列出，包含 Order Number、收货国家、联系人、电话和完整地址，供仓库创建 Party ID。",
-    "Lodz Packing List 的主 Sheet 自动按下单日期改名，例如 July 5；邮件末尾统一加入 Thank you。"
+    "批量创建仓库邮件后，系统同步创建对应的仓库反馈记录；打开任一 Order Number 会进入“仓库反馈”，可回传数量和 STT / Booking。旧邮件批次首次打开时也会自动补齐。",
+    "订单详情不再展示“期望到货”字段；Req. Ship Date 始终独立按下单日期后 1 个工作日自动计算。",
+    "仓库邮件统一以 Please help to arrange 开头；Premium 订单置顶并整行红色显示，缺少 Party ID 的联系人、电话和地址另列于主订单表后。",
+    "仓库邮件正文末尾统一加入 Thank you。"
   ]
 }
