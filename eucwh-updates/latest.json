@@ -1,12 +1,11 @@
 {
-  "latest_version": "VN85",
-  "release_time": "2026-07-14 08:55 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN85/VN85_update.zip",
-  "sha256": "df94579f4d4e76ac33f405f2597589179a0e283107fe398a10f9b3d154c6f96c",
+  "latest_version": "VN86",
+  "release_time": "2026-07-14 12:05 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN86/VN86_update.zip",
+  "sha256": "d1ac2900eed383a9c81b67898c092ca028701658404d4723029a4b391810f1ae",
   "notes": [
-    "发货订单详情移除重复的需求物料、内部仓库订单号和重复 STT 展示，订单信息改为以实际 Order Number 为主键。",
-    "需求信息改为与国家通知一致的九宫格布局：地址占用更宽区域，仓库反馈只保留仓库、状态、SKU 与需求/确认数量。",
-    "国家通知预览合并重量与体积，并移除邮件正文复制入口，保留可直接下载的双语 PDF。",
-    "不改变库存扣减、STT 回传、物流状态保护、Excel 模板和本地业务数据处理规则。"
+    "回传 STT / Booking 时可录入 Aga 或 Piotr 反馈的初步 ETA，便于物流网站尚未返回追踪结果时先完成内部跟进。",
+    "生成国家通知时自动优先使用 DSV 公开追踪或已导入物流中的最新 ETA；只有网站暂无 ETA 时才回退显示仓库反馈的初步 ETA。",
+    "初步 ETA 独立保存于仓库订单，可在后续修改 STT / 最终数量时更新或清空，不改变库存数量、预计占用或原始期望到货日期。"
   ]
 }
