@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN87",
-  "release_time": "2026-07-14 12:47 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN87/VN87_update.zip",
-  "sha256": "012b5d92f0fb365530c6fc67b1e477696ae11d3416a84151e0707120f410393f",
+  "latest_version": "VN88",
+  "release_time": "2026-07-14 14:40 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN88/VN88_update.zip",
+  "sha256": "d111670128aad96b62ea79438854f7be7d4e0e3f3ab458bc7cc1cdbe54bf61b2",
   "notes": [
-    "入库管理改为与出库管理一致的到货清单：支持搜索、状态筛选、统一排序、批量通知和点击到货编号查看详情。",
-    "到货登记支持取消：取消后保留到货编号、物料与图片历史，不参与通知，也不改动实际库存快照。",
-    "已取消到货可重新打开并恢复保存，避免填写错误时只能删除或重建。",
-    "库存仍以供应商周度 Stock List 为准；本次不改变库存计算、图片匹配、Excel 导入导出或业务数据。"
+    "出库管理支持勾选多个订单后合并生成一封仓库邮件和一张汇总表；Lodz 订单缺少 Party ID 时，邮件会保留地址并提示 Aga 创建地址 ID。",
+    "入库到货编号统一使用用户填写的参考号：列表、详情、编辑和通知使用同一个编号，不再额外生成难以识别的内部编号。",
+    "入库通知在 Windows 上直接打开 Outlook 草稿并保留现有自动签名；非 Windows 环境保留现有预览兜底。",
+    "爱尔兰归入法国代表处、冰岛归入波兰代表处；本次不上传业务数据，也不改变库存快照、图片、Excel 或物流人工状态规则。"
   ]
 }
