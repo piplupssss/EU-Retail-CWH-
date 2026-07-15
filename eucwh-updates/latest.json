@@ -1,11 +1,12 @@
 {
-  "latest_version": "VN103",
-  "release_time": "2026-07-15 18:04 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN103/VN103_update.zip",
-  "sha256": "6344c584238f5ff2b478586fe9d6a098c81b38b2dbcc6c02db504e63b7ff2cf6",
+  "latest_version": "VN104",
+  "release_time": "2026-07-15 18:12 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN104/VN104_update.zip",
+  "sha256": "44ea95a6119eac0ca726d2b58055d9f165b6e353c42a579b972ef41bcaf413ea",
   "notes": [
-    "出库管理的 Order Number 表头排序改为解析订单编号末尾的日期段（DDMMYYYY）；国家或城市名称不再影响订单的日期顺序。",
-    "保留表头点击后的升序和降序切换；无法识别末尾日期的历史编号仍使用原有文字排序作为回退。",
-    "本次只调整出库管理清单的显示排序，不修改订单、物流、库存、Excel、数据库、图片或自动更新业务逻辑。"
+    "需求 Todo 中手动修改的发货日期现在会同步到国家通知 PDF 的 Pickup Date / 发货日期。",
+    "日期优先级统一为：物流追踪或导入的实际 pickup_date > Todo 手动填写日期 > 下单日期后一个工作日。",
+    "出库详情的 Pickup Date 同步使用相同规则，避免详情与通知 PDF 显示不一致。",
+    "不修改数据库结构、库存、Excel、图片、物流人工状态或自动更新逻辑。"
   ]
 }
