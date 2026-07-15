@@ -1,13 +1,13 @@
 {
-  "latest_version": "VN95",
-  "release_time": "2026-07-15 07:01 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN95/VN95_update.zip",
-  "sha256": "b6df830dc2cda6219ceb68f200adfdc2a8b9d2f61bb9d72794814e2fb9b196e7",
+  "latest_version": "VN96",
+  "release_time": "2026-07-15 10:26 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN96/VN96_update.zip",
+  "sha256": "295a2a1bcb227e7e731ebdc86b3952f3262b5b7a212b8d58a10a6af00a0683a6",
   "notes": [
-    "Order Number 与 STT / Booking 使用独立下钻：Order Number 只展示需求、物料、仓库反馈和履约时间线；STT / Booking 只展示物流九宫格、追踪网页和撤销交付等物流操作。",
-    "Order Number 详情不再重复物流概览；STT / Booking 详情不再重复需求流程、收货信息、物料执行和履约历史，两个入口按用户任务明确分工。",
-    "修复需求数量与仓库确认数量显示不一致的问题；存在差异时统一显示“需求数量 → 仓库确认数量”，编辑后各入口使用同一份最新数据。",
-    "补充独立下钻交互契约检查，防止后续修改再次把 Order Number 与 STT / Booking 合并成相同弹窗。",
+    "STT / Booking 物流详情新增“物流时间线”：用户按需读取 DSV 公开 Tracking Link 中的 Shipment Status History，展示承运商实际运输节点、时间和地点。",
+    "订单履约时间线与 STT 物流时间线明确分离：Order Number 只保留业务履约记录，STT 只保留承运商运输节点，避免重复和混淆。",
+    "物流时间线读取为手动触发的只读补充，不会自动联网，不会覆盖本地物流状态、人工维护结果或业务数据库。",
+    "物流清单移除无实际操作价值的“异常 / 闭环”列，保留状态、筛选和既有物流维护能力。",
     "本次不修改数据库结构、库存计算、Excel 导入导出、图片匹配、物流人工状态保护或自动更新规则。"
   ]
 }
