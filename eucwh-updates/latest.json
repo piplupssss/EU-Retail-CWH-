@@ -1,11 +1,11 @@
 {
-  "latest_version": "VN100",
-  "release_time": "2026-07-15 14:12 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN100/VN100_update.zip",
-  "sha256": "e6a017fc618d88547de589cfb302156d48fcef6c003fabed4368901d5bcc6efe",
+  "latest_version": "VN101",
+  "release_time": "2026-07-15 15:10 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN101/VN101_update.zip",
+  "sha256": "443d84514a2ae9239d6326d57f5248844a6692202fd8e2e198459d978977b0ae",
   "notes": [
-    "点击 STT / Booking 后，系统直接在当前弹窗内嵌打开 DSV Public Tracking，不再自动跳出浏览器新标签。",
-    "DSV 已返回当前物流状态但未提供 Shipment Status History 时，仍可直接查看承运商页面；公开节点历史不再是物流追踪的唯一入口。",
-    "出库履约卡片中的“查看 DSV 追踪”同步改为页面内嵌展示；不修改数据库、库存、Excel、图片、人工物流状态或自动更新规则。"
+    "DSV 拒绝第三方 iframe 嵌入时，点击 STT / Booking 改为在系统当前弹窗内直接展示 DSV 公共追踪已返回的结果，不再依赖被拦截的网页嵌入。",
+    "弹窗直接展示当前物流状态、Pickup Date、ETA、实际交付、重量和体积；DSV 仅在公开提供 Shipment Status History 时才附加显示物流节点。",
+    "不自动打开浏览器新标签，不修改数据库、库存、Excel、图片、人工物流状态或本地业务数据。"
   ]
 }
