@@ -1,12 +1,11 @@
 {
-  "latest_version": "VN102",
-  "release_time": "2026-07-15 15:56 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN102/VN102_update.zip",
-  "sha256": "4a577431266879ff1fb0dc54a11283fb63ebbfb327f0775d33cb98ec6067b408",
+  "latest_version": "VN103",
+  "release_time": "2026-07-15 18:04 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN103/VN103_update.zip",
+  "sha256": "6344c584238f5ff2b478586fe9d6a098c81b38b2dbcc6c02db504e63b7ff2cf6",
   "notes": [
-    "DSV 当前运输阶段保留为原始五阶段：Booked、In Transportation、At Dispatching Center、In Delivery、Delivered；不再将 Dispatching Center 等状态压缩成笼统的“运输中”。",
-    "修复 DSV Cookie 遮罩阻断 Shipment Status History 展开的问题；系统读取 Event、Date、Location、Reason 公开节点，并在 STT 当前弹窗中按物流时间线展示。",
-    "已用 PLLOZ607010829 实测：当前阶段为 At Dispatching Center，成功读取 Lodz、Krakow、Budapest 等 8 个公开运输节点。",
-    "不自动打开新标签，不修改数据库、库存、Excel、图片、人工维护物流状态或本地业务数据。"
+    "出库管理的 Order Number 表头排序改为解析订单编号末尾的日期段（DDMMYYYY）；国家或城市名称不再影响订单的日期顺序。",
+    "保留表头点击后的升序和降序切换；无法识别末尾日期的历史编号仍使用原有文字排序作为回退。",
+    "本次只调整出库管理清单的显示排序，不修改订单、物流、库存、Excel、数据库、图片或自动更新业务逻辑。"
   ]
 }
