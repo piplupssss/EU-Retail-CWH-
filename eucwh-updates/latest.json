@@ -1,12 +1,11 @@
 {
-  "latest_version": "VN104",
-  "release_time": "2026-07-15 18:12 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN104/VN104_update.zip",
-  "sha256": "44ea95a6119eac0ca726d2b58055d9f165b6e353c42a579b972ef41bcaf413ea",
+  "latest_version": "VN105",
+  "release_time": "2026-07-16 00:36 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN105/VN105_update.zip",
+  "sha256": "3bf18af78225c844f5e1221ca63c83a7415eb67e20ca5008055ae07fce3f775c",
   "notes": [
-    "需求 Todo 中手动修改的发货日期现在会同步到国家通知 PDF 的 Pickup Date / 发货日期。",
-    "日期优先级统一为：物流追踪或导入的实际 pickup_date > Todo 手动填写日期 > 下单日期后一个工作日。",
-    "出库详情的 Pickup Date 同步使用相同规则，避免详情与通知 PDF 显示不一致。",
-    "不修改数据库结构、库存、Excel、图片、物流人工状态或自动更新逻辑。"
+    "完整备份固定为一个 core_backup_no_images.xlsx 和一个 images 文件夹；ZIP 根目录只保留这两项。",
+    "核心 Excel 保留库存、SKU、物流、发票验收、常用地址、出库入库、库存占用及时间线等业务关联数据。",
+    "上传过的 PDF、Excel、CSV 等源文件不再额外写入完整备份；图片只保留为 images 文件夹中的产品图。"
   ]
 }
