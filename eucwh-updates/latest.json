@@ -1,11 +1,11 @@
 {
-  "latest_version": "VN99",
-  "release_time": "2026-07-15 14:00 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN99/VN99_update.zip",
-  "sha256": "71655fe9ecb0580ed0a0425ea9efbf4a2773f961609dfe578ecf24eb552e2f20",
+  "latest_version": "VN100",
+  "release_time": "2026-07-15 14:12 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN100/VN100_update.zip",
+  "sha256": "e6a017fc618d88547de589cfb302156d48fcef6c003fabed4368901d5bcc6efe",
   "notes": [
-    "出库管理支持勾选多个已回传 STT 的需求 Todo，统一生成一份国家通知 PDF；每个 STT 自动从新页开始，未回传 STT 的需求会明确提示并跳过。",
-    "需求 Todo 搜索新增 Product No、BOM Code 与产品描述匹配，可从具体物料直接定位对应订单。",
-    "本次不修改数据库结构、库存计算、Excel 导入导出、图片匹配、物流人工状态保护或自动更新规则。"
+    "点击 STT / Booking 后，系统直接在当前弹窗内嵌打开 DSV Public Tracking，不再自动跳出浏览器新标签。",
+    "DSV 已返回当前物流状态但未提供 Shipment Status History 时，仍可直接查看承运商页面；公开节点历史不再是物流追踪的唯一入口。",
+    "出库履约卡片中的“查看 DSV 追踪”同步改为页面内嵌展示；不修改数据库、库存、Excel、图片、人工物流状态或自动更新规则。"
   ]
 }
