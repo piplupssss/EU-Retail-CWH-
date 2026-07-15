@@ -1,12 +1,13 @@
 {
-  "latest_version": "VN94",
-  "release_time": "2026-07-14 23:46 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN94/VN94_update.zip",
-  "sha256": "0db3557f25218ed38d0a09a24e9dee906948ec7f920c7e72d2c0c145b2e19c10",
+  "latest_version": "VN95",
+  "release_time": "2026-07-15 07:01 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN95/VN95_update.zip",
+  "sha256": "b6df830dc2cda6219ceb68f200adfdc2a8b9d2f61bb9d72794814e2fb9b196e7",
   "notes": [
-    "出库管理按物流清单标准补齐表头排序与下拉筛选：支持按 STT 回传状态、需求国、收货国、物料匹配状态、发货仓库和进度筛选，并支持一键清除筛选。",
-    "出库管理搜索支持直接输入 STT / Booking；STT 列移动到 Order Number 后方并保留统一下钻，减少跨模块查找。",
-    "物流概览统一为 3×3 九宫格，依次展示 STT、履约状态、需求国与收货国、服务等级、发货仓库、重量与体积、ETA、Pickup Date、实际交付。",
-    "本次只调整查询与界面展示，不修改数据库结构、库存计算、Excel 导入导出、图片匹配、物流状态保护或自动更新规则。"
+    "Order Number 与 STT / Booking 使用独立下钻：Order Number 只展示需求、物料、仓库反馈和履约时间线；STT / Booking 只展示物流九宫格、追踪网页和撤销交付等物流操作。",
+    "Order Number 详情不再重复物流概览；STT / Booking 详情不再重复需求流程、收货信息、物料执行和履约历史，两个入口按用户任务明确分工。",
+    "修复需求数量与仓库确认数量显示不一致的问题；存在差异时统一显示“需求数量 → 仓库确认数量”，编辑后各入口使用同一份最新数据。",
+    "补充独立下钻交互契约检查，防止后续修改再次把 Order Number 与 STT / Booking 合并成相同弹窗。",
+    "本次不修改数据库结构、库存计算、Excel 导入导出、图片匹配、物流人工状态保护或自动更新规则。"
   ]
 }
