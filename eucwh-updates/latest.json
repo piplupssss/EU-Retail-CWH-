@@ -1,14 +1,11 @@
 {
-  "latest_version": "VN97",
-  "release_time": "2026-07-15 11:29 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN97/VN97_update.zip",
-  "sha256": "c315320a46d77d871f8dee9b0c3007399578f819c34f37a4c7367e51e96b22ec",
+  "latest_version": "VN98",
+  "release_time": "2026-07-15 13:43 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN98/VN98_update.zip",
+  "sha256": "db9770a8f4bf1aeb60435411f0e62874fdbcd06210a06edaf1e82cb39c88ace5",
   "notes": [
-    "核心完整包新增备份与恢复常用地址和 Party ID、出库需求与物料、仓库订单与物料、STT 履约时间线、仓库邮件批次、库存占用、到货登记与物料、出入库调整记录；恢复时通过 Order Number、到货参考号和地址标签重新建立关联，不依赖旧电脑的内部数据库编号。",
-    "恢复完成后自动重建已确认仓库订单的 -N 预计占用与到货登记的 +N 暂存调整，确保在下一次供应商库存快照前，预计可用库存仍与业务链路一致。",
-    "一键瘦身的“清库存”不再删除出库需求、仓库订单、STT 履约时间线、入库到货或常用地址；页面说明同步明确保留范围。",
-    "导航按实际频率重排：日常作业集中出库、入库、库存清单和物流清单；物流/库存/发票看板下移至“工作台与分析”；出入流水与验收清单归入“核对”。移动端入口同步调整。",
-    "修复 DSV 公开 Tracking Link 的 Shipment Status History 展开读取，物流时间线可按需读取公开节点；不上传本地业务数据，也不覆盖人工物流维护结果。",
-    "发货日期 / Pickup Date 统一采用“物流实际 pickup_date 优先，其次手动填写，最后按下单日期后 1 个工作日自动计算”的规则；历史 Req. Ship Date 不再锁死国家通知中的发货日期。"
+    "修复 STT 物流时间线刷新后无显示的问题：读取开始即在时间线区域显示加载状态，成功后按 STT 规范化键直接渲染 DSV Shipment Status History 节点。",
+    "当 DSV 未找到编号、暂未发布节点或公开追踪读取失败时，时间线会保留明确原因，不再只恢复“刷新物流时间线”按钮。",
+    "物流时间线保持按需、只读的公开追踪补充：不会覆盖本地物流导入、人工维护状态或业务数据。"
   ]
 }
