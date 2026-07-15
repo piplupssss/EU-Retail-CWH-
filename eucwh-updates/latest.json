@@ -1,11 +1,11 @@
 {
-  "latest_version": "VN98",
-  "release_time": "2026-07-15 13:43 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN98/VN98_update.zip",
-  "sha256": "db9770a8f4bf1aeb60435411f0e62874fdbcd06210a06edaf1e82cb39c88ace5",
+  "latest_version": "VN99",
+  "release_time": "2026-07-15 14:00 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN99/VN99_update.zip",
+  "sha256": "71655fe9ecb0580ed0a0425ea9efbf4a2773f961609dfe578ecf24eb552e2f20",
   "notes": [
-    "修复 STT 物流时间线刷新后无显示的问题：读取开始即在时间线区域显示加载状态，成功后按 STT 规范化键直接渲染 DSV Shipment Status History 节点。",
-    "当 DSV 未找到编号、暂未发布节点或公开追踪读取失败时，时间线会保留明确原因，不再只恢复“刷新物流时间线”按钮。",
-    "物流时间线保持按需、只读的公开追踪补充：不会覆盖本地物流导入、人工维护状态或业务数据。"
+    "出库管理支持勾选多个已回传 STT 的需求 Todo，统一生成一份国家通知 PDF；每个 STT 自动从新页开始，未回传 STT 的需求会明确提示并跳过。",
+    "需求 Todo 搜索新增 Product No、BOM Code 与产品描述匹配，可从具体物料直接定位对应订单。",
+    "本次不修改数据库结构、库存计算、Excel 导入导出、图片匹配、物流人工状态保护或自动更新规则。"
   ]
 }
