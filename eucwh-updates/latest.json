@@ -1,11 +1,12 @@
 {
-  "latest_version": "VN101",
-  "release_time": "2026-07-15 15:10 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN101/VN101_update.zip",
-  "sha256": "443d84514a2ae9239d6326d57f5248844a6692202fd8e2e198459d978977b0ae",
+  "latest_version": "VN102",
+  "release_time": "2026-07-15 15:56 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN102/VN102_update.zip",
+  "sha256": "4a577431266879ff1fb0dc54a11283fb63ebbfb327f0775d33cb98ec6067b408",
   "notes": [
-    "DSV 拒绝第三方 iframe 嵌入时，点击 STT / Booking 改为在系统当前弹窗内直接展示 DSV 公共追踪已返回的结果，不再依赖被拦截的网页嵌入。",
-    "弹窗直接展示当前物流状态、Pickup Date、ETA、实际交付、重量和体积；DSV 仅在公开提供 Shipment Status History 时才附加显示物流节点。",
-    "不自动打开浏览器新标签，不修改数据库、库存、Excel、图片、人工物流状态或本地业务数据。"
+    "DSV 当前运输阶段保留为原始五阶段：Booked、In Transportation、At Dispatching Center、In Delivery、Delivered；不再将 Dispatching Center 等状态压缩成笼统的“运输中”。",
+    "修复 DSV Cookie 遮罩阻断 Shipment Status History 展开的问题；系统读取 Event、Date、Location、Reason 公开节点，并在 STT 当前弹窗中按物流时间线展示。",
+    "已用 PLLOZ607010829 实测：当前阶段为 At Dispatching Center，成功读取 Lodz、Krakow、Budapest 等 8 个公开运输节点。",
+    "不自动打开新标签，不修改数据库、库存、Excel、图片、人工维护物流状态或本地业务数据。"
   ]
 }
