@@ -1,11 +1,12 @@
 {
-  "latest_version": "VN110",
-  "release_time": "2026-07-16 17:23 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN110/VN110_update.zip",
-  "sha256": "55b2dd715644bd5679ecf4f1d6b7ea9bfaa741a9f0263069e990b6326e433646",
+  "latest_version": "VN111",
+  "release_time": "2026-07-16 21:53 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN111/VN111_update.zip",
+  "sha256": "ff1afaa21cb0557b1439b37bed054917b76022b280de64f8a717f1dad2550ca4",
   "notes": [
-    "物流清单中，勾选一条或多条后点击“维护所选”统一打开同一清单维护窗口；不再因只勾选一条而误入履约详情。",
-    "履约详情仅由直接点击 STT / Booking 打开，保持“查看详情”和“批量维护”的操作边界清晰。",
-    "物流看板加载统计前采用与物流清单相同的 RHQ 支撑订单整理口径，避免看板统计与清单总数不一致。"
+    "批量核实会继续处理已纳入 RHQ 管理但缺少发货日期、ETA、重量或体积的 STT；即使占位记录默认显示已交付，也会补抓缺失的真实物流信息。",
+    "DSV 公开追踪返回的当前状态、发货日期、ETA、实际交付、件数、重量、体积和完整物流时间线会写入本地数据，后续打开详情可直接读取已保存结果。",
+    "供应商物流 Excel 后续刷新时，空白日期和零值不会覆盖已经人工维护或追踪补全的物流字段；批量核实也只补缺失值，不破坏已有数据。",
+    "完整备份 Excel 会保存物流追踪摘要、时间线和最后核实时间；恢复完整包后可继续使用，不需要重新逐单抓取。"
   ]
 }
