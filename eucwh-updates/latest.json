@@ -1,10 +1,11 @@
 {
-  "latest_version": "VN109",
-  "release_time": "2026-07-16 16:22 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN109/VN109_update.zip",
-  "sha256": "c76e841f30297da5907adabd4cde74bbafbe7fd5795901d6e9c75bcb8f07c954",
+  "latest_version": "VN110",
+  "release_time": "2026-07-16 17:23 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN110/VN110_update.zip",
+  "sha256": "55b2dd715644bd5679ecf4f1d6b7ea9bfaa741a9f0263069e990b6326e433646",
   "notes": [
-    "物流看板的时间筛选改为按年度显示，例如“2026 全年”“2025 全年”，不再提供含义不明确的“全部”。",
-    "选择年度后，物流概览、状态与类型分布、国家分析和月度趋势统一限定在该年度；从看板下钻物流清单时也保留相同年度条件。"
+    "物流清单中，勾选一条或多条后点击“维护所选”统一打开同一清单维护窗口；不再因只勾选一条而误入履约详情。",
+    "履约详情仅由直接点击 STT / Booking 打开，保持“查看详情”和“批量维护”的操作边界清晰。",
+    "物流看板加载统计前采用与物流清单相同的 RHQ 支撑订单整理口径，避免看板统计与清单总数不一致。"
   ]
 }
