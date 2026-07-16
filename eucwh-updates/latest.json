@@ -1,11 +1,13 @@
 {
-  "latest_version": "VN112",
-  "release_time": "2026-07-16 23:00 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN112/VN112_update.zip",
-  "sha256": "7ead4055047c4dbeb0523ba22a58749e9f13e98ce8164e6163eac8012a947e5a",
+  "latest_version": "VN113",
+  "release_time": "2026-07-17 00:11 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN113/VN113_update.zip",
+  "sha256": "c291f6c1cf461446dfcb324035d4586fb81614f37f1d955d50f87f19a9417b6b",
   "notes": [
-    "修复物流清单直接打开约 400 单、点击“总运单数”下钻后只剩约 300 单的问题。",
-    "总运单数、状态卡片和时间筛选现在会保留已明确纳入 RHQ 管理但暂时缺少发货日期与 Pickup Date 的订单。",
-    "物流看板与物流清单继续使用同一统计口径；待公开物流补全日期后，订单会自动进入对应时间范围。"
+    "所有业务清单默认完整显示，移除每页数量选择；国家与归属国筛选加载全部可用选项，不再只显示当前页数据。",
+    "登录后显示彩蛋并默认进入库存清单，导航栏默认折叠；库存更新时间采用最近一次真实物流数据上传时间。",
+    "同一 STT 对应多张已核实发票时，物流清单、导出与验收金额按发票明细累计，不再只取其中一张。",
+    "移除德国 Am Seestern 订单的一次性需求国调整执行入口；已写入本地数据库的人工结果继续保留。",
+    "静态页面资源禁用旧缓存，刷新后立即加载当前版本界面和交互逻辑。"
   ]
 }
