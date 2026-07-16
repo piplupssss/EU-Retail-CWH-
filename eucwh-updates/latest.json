@@ -1,13 +1,12 @@
 {
-  "latest_version": "VN106",
-  "release_time": "2026-07-16 11:26 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN106/VN106_update.zip",
-  "sha256": "40eb6d72381a44a7ab1c060d2b9c7d60b0e8c88fac96a448adfd31e69c049456",
+  "latest_version": "VN107",
+  "release_time": "2026-07-16 13:24 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN107/VN107_update.zip",
+  "sha256": "1f8a98874b683b94a286d1c0b46e37fa62e245746dab0e74033af1796ddf8d3d",
   "notes": [
-    "汇总 VN105 之后尚未发布的出库、物流、发票验收、数据维护与界面交互改动，并以 VN106 作为完整累计补丁发布。",
-    "修复 SKU 通用维护在未修改彼得仓数量时仍写入 0 的问题；只有用户明确更改彼得仓库存数，系统才会创建或更新彼得仓库存记录。",
-    "Lodz 入库、出库、图片或主信息维护不再隐式创建彼得仓库存；库存正式快照、图片、SKU 主信息、历史出入流水和订单数据继续保持独立。",
-    "库存选择和订单选品同步展示供应商库存快照及未入周报前的临时 +N / -N 变化，便于判断可用库存而不篡改供应商快照。",
-    "保留既有业务数据边界：更新包不包含本机数据库、图片、上传源文件、缓存或运行日志；完整备份仍为一个 core_backup_no_images.xlsx 与 images 文件夹。"
+    "供应商完整费用明细仍作为发票账本；默认只对已导入物流清单的地区部订单进行匹配与验收统计。",
+    "针对波兰本地订单中确实需要地区部支撑的少数 STT，新增“纳入 RHQ 管理”操作：仅手动选择的 STT 才进入物流清单和发票验收范围，不会把全部波兰订单导入系统。",
+    "纳入后先以“待核实”显示，待后续物流 Excel 导入同一 STT 时自动合并为真实物流记录；移出管理只清除该手动监控占位，不删除真实物流记录。",
+    "发票监控范围和手动纳入的 STT 关系已写入 core backup Excel；完整备份继续只保留一个 core_backup_no_images.xlsx 与 images 文件夹，不保存 PDF、Excel 等上传源文件。"
   ]
 }
