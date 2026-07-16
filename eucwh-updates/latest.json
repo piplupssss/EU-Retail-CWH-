@@ -1,11 +1,13 @@
 {
-  "latest_version": "VN105",
-  "release_time": "2026-07-16 00:36 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN105/VN105_update.zip",
-  "sha256": "3bf18af78225c844f5e1221ca63c83a7415eb67e20ca5008055ae07fce3f775c",
+  "latest_version": "VN106",
+  "release_time": "2026-07-16 11:26 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN106/VN106_update.zip",
+  "sha256": "40eb6d72381a44a7ab1c060d2b9c7d60b0e8c88fac96a448adfd31e69c049456",
   "notes": [
-    "完整备份固定为一个 core_backup_no_images.xlsx 和一个 images 文件夹；ZIP 根目录只保留这两项。",
-    "核心 Excel 保留库存、SKU、物流、发票验收、常用地址、出库入库、库存占用及时间线等业务关联数据。",
-    "上传过的 PDF、Excel、CSV 等源文件不再额外写入完整备份；图片只保留为 images 文件夹中的产品图。"
+    "汇总 VN105 之后尚未发布的出库、物流、发票验收、数据维护与界面交互改动，并以 VN106 作为完整累计补丁发布。",
+    "修复 SKU 通用维护在未修改彼得仓数量时仍写入 0 的问题；只有用户明确更改彼得仓库存数，系统才会创建或更新彼得仓库存记录。",
+    "Lodz 入库、出库、图片或主信息维护不再隐式创建彼得仓库存；库存正式快照、图片、SKU 主信息、历史出入流水和订单数据继续保持独立。",
+    "库存选择和订单选品同步展示供应商库存快照及未入周报前的临时 +N / -N 变化，便于判断可用库存而不篡改供应商快照。",
+    "保留既有业务数据边界：更新包不包含本机数据库、图片、上传源文件、缓存或运行日志；完整备份仍为一个 core_backup_no_images.xlsx 与 images 文件夹。"
   ]
 }
