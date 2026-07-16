@@ -1,12 +1,10 @@
 {
-  "latest_version": "VN108",
-  "release_time": "2026-07-16 15:04 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN108/VN108_update.zip",
-  "sha256": "3466edda7cceeb5ba200515ff6e293a2452d01ef85597666123607b9d49740e3",
+  "latest_version": "VN109",
+  "release_time": "2026-07-16 16:22 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN109/VN109_update.zip",
+  "sha256": "c76e841f30297da5907adabd4cde74bbafbe7fd5795901d6e9c75bcb8f07c954",
   "notes": [
-    "完整包的核心 Excel 新增“图片映射”表，明确保存原始 BOM Code 或 Product No 与实际图片文件名的对应关系。",
-    "恢复完整包时不再通过图片文件名反推 SKU；带空格、斜杠、特殊字符或大小写差异的 SKU 也可稳定恢复图片。",
-    "完整包会保留全部本地 SKU 图片，包括零库存、近期入库和手动上传后尚未形成库存记录的图片。",
-    "库存底表同步仅处理对应仓库的库存行，不删除 SKU 主数据、图片映射或历史出入库记录。"
+    "物流看板的时间筛选改为按年度显示，例如“2026 全年”“2025 全年”，不再提供含义不明确的“全部”。",
+    "选择年度后，物流概览、状态与类型分布、国家分析和月度趋势统一限定在该年度；从看板下钻物流清单时也保留相同年度条件。"
   ]
 }
