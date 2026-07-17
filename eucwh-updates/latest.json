@@ -1,11 +1,12 @@
 {
-  "latest_version": "VN114",
-  "release_time": "2026-07-17 09:32 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN114/VN114_update.zip",
-  "sha256": "e44715fa3b076979ce1be8717c97394d8d11680e892fa4824f291afafb538835",
+  "latest_version": "VN115",
+  "release_time": "2026-07-17 12:27 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN115/VN115_update.zip",
+  "sha256": "800665b44b635e780ad49c0ec99b927e41d745bc1c3bd93f119ca93821dc79e8",
   "notes": [
-    "已验收或已拒绝的发票现在都可以一键退回“待验收”，用于纠正误点验收、误点拒绝或复核后调整 RHQ 管理范围的情况。",
-    "退回只重置验收结论：供应商费用明细、STT 匹配、金额和核对备注都会保留，可按当前有效匹配范围重新确认。",
-    "将 STT 移出 RHQ 管理时，相关发票会自动退回待验收，避免已验收金额继续保留在不再归属地区部的物流上。"
+    "数据管理中心新增“价格与备注校准”：在本机选择 Excel 后先预览，再确认写入。首行使用 BOM Code、名称、价格三列即可。",
+    "校准按 BOM Code 仅更新已有物料的单价和备注；价格统一保留两位小数，不创建 SKU。",
+    "本次校准不会修改库存数量、仓库归属、图片、出入库流水或历史记录；源 Excel 只在本次读取，不会保存到系统。",
+    "预览会显示命中、未命中、跳过和重复 BOM Code，确认写入前可核对影响范围。"
   ]
 }
