@@ -1,13 +1,11 @@
 {
-  "latest_version": "VN113",
-  "release_time": "2026-07-17 00:11 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN113/VN113_update.zip",
-  "sha256": "c291f6c1cf461446dfcb324035d4586fb81614f37f1d955d50f87f19a9417b6b",
+  "latest_version": "VN114",
+  "release_time": "2026-07-17 09:32 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN114/VN114_update.zip",
+  "sha256": "e44715fa3b076979ce1be8717c97394d8d11680e892fa4824f291afafb538835",
   "notes": [
-    "所有业务清单默认完整显示，移除每页数量选择；国家与归属国筛选加载全部可用选项，不再只显示当前页数据。",
-    "登录后显示彩蛋并默认进入库存清单，导航栏默认折叠；库存更新时间采用最近一次真实物流数据上传时间。",
-    "同一 STT 对应多张已核实发票时，物流清单、导出与验收金额按发票明细累计，不再只取其中一张。",
-    "移除德国 Am Seestern 订单的一次性需求国调整执行入口；已写入本地数据库的人工结果继续保留。",
-    "静态页面资源禁用旧缓存，刷新后立即加载当前版本界面和交互逻辑。"
+    "已验收或已拒绝的发票现在都可以一键退回“待验收”，用于纠正误点验收、误点拒绝或复核后调整 RHQ 管理范围的情况。",
+    "退回只重置验收结论：供应商费用明细、STT 匹配、金额和核对备注都会保留，可按当前有效匹配范围重新确认。",
+    "将 STT 移出 RHQ 管理时，相关发票会自动退回待验收，避免已验收金额继续保留在不再归属地区部的物流上。"
   ]
 }
