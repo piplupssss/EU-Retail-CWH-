@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN115",
-  "release_time": "2026-07-17 12:27 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN115/VN115_update.zip",
-  "sha256": "800665b44b635e780ad49c0ec99b927e41d745bc1c3bd93f119ca93821dc79e8",
+  "latest_version": "VN116",
+  "release_time": "2026-07-19 10:18 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN116/VN116_update.zip",
+  "sha256": "5b0d2022754e13dc74be6189c455b32fc1579fd587852ead19cdf5f8d8f43210",
   "notes": [
-    "数据管理中心新增“价格与备注校准”：在本机选择 Excel 后先预览，再确认写入。首行使用 BOM Code、名称、价格三列即可。",
-    "校准按 BOM Code 仅更新已有物料的单价和备注；价格统一保留两位小数，不创建 SKU。",
-    "本次校准不会修改库存数量、仓库归属、图片、出入库流水或历史记录；源 Excel 只在本次读取，不会保存到系统。",
-    "预览会显示命中、未命中、跳过和重复 BOM Code，确认写入前可核对影响范围。"
+    "优化库存、物流与出库管理的列表、详情和导出协作体验，保持常用操作可从自然下一步进入。",
+    "完善库存流水、库存统计与物流数据的服务处理，库存仍以“仓库 + Product No”为唯一身份，不跨仓创建虚假库存。",
+    "核心备份继续覆盖结构化业务数据与物流追踪快照；更新包不包含本地数据库、图片或供应商上传文件。",
+    "Product No 继续按供应商 Stock List 的原始大小写展示；STT、发票验收和既有地址/订单流程规则保持不变。"
   ]
 }
