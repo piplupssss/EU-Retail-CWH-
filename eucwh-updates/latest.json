@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN121",
-  "release_time": "2026-07-20 16:44 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN121/VN121_update.zip",
-  "sha256": "fa48ef958e56284c633d0295b80493a9530516b7d7ad07e23eb83ac581b3082d",
+  "latest_version": "VN122",
+  "release_time": "2026-07-20 17:14 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN122/VN122_update.zip",
+  "sha256": "aa78046522f62d613713c75f83b365f717fc1aed816a937254ecb1b06c3b7420",
   "notes": [
-    "Product No 详情的“近期出入流水”现在同时读取旧的库存占用 reservation 路径，解决 PC 上已存在临时扣减但没有显示“临时出库”的问题。",
-    "正在 reserved 的库存占用会显示为“临时出库（待 Stock List 刷新或月度流水校准）”，ID_OPERACJI 显示业务 Order Number，并可点击打开订单履约弹窗。",
-    "已被 Stock List 释放的 reservation 会继续显示为“已被 Stock List 吸收，待月度流水校准”，避免库存红色扣减释放后 Product No 近期流水断档。",
-    "旧 reservation 路径也支持部分校准：同一 SKU 扣 5 件、库存只吸收 2 件时，会拆出已吸收的 2 件临时流水，剩余 3 件继续保留为临时扣减。"
+    "修复升级前已经被 Stock List 校准释放的旧库存占用记录：即使历史 reservation 没有写入 Stock List 释放标记，Product No 详情也会显示临时出库流水。",
+    "这类历史 released reservation 会显示为“临时出库（已被 Stock List 吸收，待月度流水校准）”，并在 ID_OPERACJI 中显示业务 Order Number。",
+    "取消订单和正式 Specyfikacja 月度流水释放的记录不会被当作待校准临时流水显示，避免错误回流。",
+    "继续保留 VN121 的旧 reservation 路径、Order Number 点击弹窗，以及多单/部分校准兼容逻辑。"
   ]
 }
