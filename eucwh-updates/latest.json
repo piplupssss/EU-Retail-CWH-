@@ -2,7 +2,7 @@
   "latest_version": "VN120",
   "release_time": "2026-07-20 16:26 CEST",
   "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN120/VN120_update.zip",
-  "sha256": "9d8fa5285f185e7dc68c7688fec3c95a0b80e7cc433610b08866945449e90dd3",
+  "sha256": "c8636a53d6cca21de37b9e2dacd34ddda1d4e9d98747fb27b1ac7080d849eafe",
   "notes": [
     "Product No 详情的临时出库流水中，ID_OPERACJI 现在优先显示用户界面里的 Order Number，而不是内部仓库订单号。",
     "临时出库的 Order Number 支持点击打开订单履约弹窗，直接查看需求、物料、仓库反馈、STT 和履约时间线。",
