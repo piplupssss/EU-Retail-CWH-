@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN119",
-  "release_time": "2026-07-20 16:04 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN119/VN119_update.zip",
-  "sha256": "6f1832308ec5466efe935dcd299e3f25eb48cc805da3d8c5f86d03649d84cc8a",
+  "latest_version": "VN120",
+  "release_time": "2026-07-20 16:26 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN120/VN120_update.zip",
+  "sha256": "9d8fa5285f185e7dc68c7688fec3c95a0b80e7cc433610b08866945449e90dd3",
   "notes": [
-    "Product No 详情的“近期出入流水”现在会显示确认出库或到货通知生成的临时库存记录，并用“临时出库/临时入库”标记。",
-    "临时出库流水的 ID_OPERACJI 显示 Order Number，便于从 Product No 直接追到是哪一单造成的临时扣减。",
-    "Stock List 刷新吸收的临时扣减不再参与红色库存占用，但会继续留在近期流水中，直到月度 Specyfikacja 正式流水导入后自动校准退出。",
-    "核心备份新增“临时库存调整”数据，恢复时会保留 open、stock_reconciled、reconciled 等状态，避免已释放扣减恢复后重新变红。"
+    "Product No 详情的临时出库流水中，ID_OPERACJI 现在优先显示用户界面里的 Order Number，而不是内部仓库订单号。",
+    "临时出库的 Order Number 支持点击打开订单履约弹窗，直接查看需求、物料、仓库反馈、STT 和履约时间线。",
+    "正式 Specyfikacja 出入库流水保持供应商原始 ID_OPERACJI，不附加订单跳转，避免混淆正式流水和临时流水。",
+    "继续保留 VN119 的多单、多次扣减、部分 Stock List 校准和月度流水校准释放逻辑。"
   ]
 }
