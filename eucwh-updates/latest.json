@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN116",
-  "release_time": "2026-07-19 10:18 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN116/VN116_update.zip",
-  "sha256": "ef9f4766cdffdc71d15a85c6bd9b9bb0bc984f7e97a2da2863e27b99b35f7c79",
+  "latest_version": "VN117",
+  "release_time": "2026-07-20 15:47 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN117/VN117_update.zip",
+  "sha256": "ae0f8d375cd317b76b34d2eae1ee4a7a2c2ac76169039c42db3cccfd20ce6fc5",
   "notes": [
-    "优化库存、物流与出库管理的列表、详情和导出协作体验，保持常用操作可从自然下一步进入。",
-    "完善库存流水、库存统计与物流数据的服务处理，库存仍以“仓库 + Product No”为唯一身份，不跨仓创建虚假库存。",
-    "核心备份继续覆盖结构化业务数据与物流追踪快照；更新包不包含本地数据库、图片或供应商上传文件。",
-    "Product No 继续按供应商 Stock List 的原始大小写展示；STT、发票验收和既有地址/订单流程规则保持不变。"
+    "供应商 Stock List 刷新时，系统会按 Warehouse + Product No 对比旧库存和新库存，只释放已经被新库存快照吸收的确认出库占用。",
+    "库存已经从 10 变为 2 时，原有 STT 确认出库的红色 -8 会自动关闭；库存仍为 1 时，未实际出库的红色 -1 会继续保留。",
+    "支持部分吸收：需求或 STT 确认 8 件但新库存只下降 5 件时，系统保留剩余 -3，避免提前释放未完成出库。",
+    "供应商库存导入和出入库通知继续保留 Stock List 中 Product No、Category、Category 2 的原始写法；更新包不包含本地数据库、图片或供应商上传文件。"
   ]
 }
