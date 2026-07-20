@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN118",
-  "release_time": "2026-07-20 15:53 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN118/VN118_update.zip",
-  "sha256": "c87f2a7b7d100bba51760fe9ae9616d8aa125cc4e5c3a40276f8a4e133be60c5",
+  "latest_version": "VN119",
+  "release_time": "2026-07-20 16:04 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN119/VN119_update.zip",
+  "sha256": "6f1832308ec5466efe935dcd299e3f25eb48cc805da3d8c5f86d03649d84cc8a",
   "notes": [
-    "库存清单默认不再显示库存为 0 且没有开放临时入库、确认出库占用或 reservation 的 SKU，避免供应商刷新后已清空的物料继续占据清单。",
-    "零库存 SKU 的主数据、图片、价格、备注和出入库历史仍保留在本地数据库，可通过后续供应商库存刷新或 Product No 详情继续复用。",
-    "如果 0 库存 SKU 仍有未被新 Stock List 吸收的临时到货或确认出库记录，库存清单会继续显示对应 +N/-N，避免隐藏未完成事项。",
-    "继续保留 VN117 的 Stock List 差额校准：只释放已经被新库存快照吸收的红色出库扣减，未实际出库和部分出库的剩余数量继续显示。"
+    "Product No 详情的“近期出入流水”现在会显示确认出库或到货通知生成的临时库存记录，并用“临时出库/临时入库”标记。",
+    "临时出库流水的 ID_OPERACJI 显示 Order Number，便于从 Product No 直接追到是哪一单造成的临时扣减。",
+    "Stock List 刷新吸收的临时扣减不再参与红色库存占用，但会继续留在近期流水中，直到月度 Specyfikacja 正式流水导入后自动校准退出。",
+    "核心备份新增“临时库存调整”数据，恢复时会保留 open、stock_reconciled、reconciled 等状态，避免已释放扣减恢复后重新变红。"
   ]
 }
