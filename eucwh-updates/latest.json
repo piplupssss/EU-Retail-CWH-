@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN117",
-  "release_time": "2026-07-20 15:47 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN117/VN117_update.zip",
-  "sha256": "ae0f8d375cd317b76b34d2eae1ee4a7a2c2ac76169039c42db3cccfd20ce6fc5",
+  "latest_version": "VN118",
+  "release_time": "2026-07-20 15:53 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN118/VN118_update.zip",
+  "sha256": "c87f2a7b7d100bba51760fe9ae9616d8aa125cc4e5c3a40276f8a4e133be60c5",
   "notes": [
-    "供应商 Stock List 刷新时，系统会按 Warehouse + Product No 对比旧库存和新库存，只释放已经被新库存快照吸收的确认出库占用。",
-    "库存已经从 10 变为 2 时，原有 STT 确认出库的红色 -8 会自动关闭；库存仍为 1 时，未实际出库的红色 -1 会继续保留。",
-    "支持部分吸收：需求或 STT 确认 8 件但新库存只下降 5 件时，系统保留剩余 -3，避免提前释放未完成出库。",
-    "供应商库存导入和出入库通知继续保留 Stock List 中 Product No、Category、Category 2 的原始写法；更新包不包含本地数据库、图片或供应商上传文件。"
+    "库存清单默认不再显示库存为 0 且没有开放临时入库、确认出库占用或 reservation 的 SKU，避免供应商刷新后已清空的物料继续占据清单。",
+    "零库存 SKU 的主数据、图片、价格、备注和出入库历史仍保留在本地数据库，可通过后续供应商库存刷新或 Product No 详情继续复用。",
+    "如果 0 库存 SKU 仍有未被新 Stock List 吸收的临时到货或确认出库记录，库存清单会继续显示对应 +N/-N，避免隐藏未完成事项。",
+    "继续保留 VN117 的 Stock List 差额校准：只释放已经被新库存快照吸收的红色出库扣减，未实际出库和部分出库的剩余数量继续显示。"
   ]
 }
