@@ -1,13 +1,13 @@
 {
-  "latest_version": "VN125",
-  "release_time": "2026-07-21 16:06 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN125/VN125_update.zip",
-  "sha256": "6a6fd8bd247421678b5809fd469938e73e65f810db72873b4df584520b082542",
+  "latest_version": "VN126",
+  "release_time": "2026-07-21 16:37 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN126/VN126_update.zip",
+  "sha256": "e7e9fd2bca53a3e4eaed871c6de7c653c6ad7eb20376243d6e5402e70d8d8b03",
   "notes": [
-    "合并国家通知 PDF 不再要求先回传 STT：需求 Todo 已填写收货信息并匹配 SKU/数量后，即可生成国家核对 PDF。",
-    "未回传 STT 的需求会生成“Shipment Details Confirmation / 发货明细确认”，明确提示国家先核对 SKU、数量和收货信息，STT/Booking 显示为待仓库回复。",
-    "已回传 STT 的订单仍生成正式“Shipment Notification / 发货通知”，并继续刷新 DSV 公开追踪信息、显示 STT、ETA、重量体积等物流字段。",
-    "同一批合并通知可以同时包含国家核对版和正式物流版；尚未匹配 SKU 的需求会被跳过并提示。",
-    "订单履约详情中，SKU 匹配后即可直接点击“生成国家核对通知”，不再需要手动填“待刷新”才能通知国家。"
+    "系统 logo 更新为 REU Retail：登录页、浏览器图标、顶部栏、Windows 启动器/升级器图标源统一使用新 logo。",
+    "国家货物/物流通知 PDF 增加 REU Retail 页眉，并在页脚说明通知由 EU Retail CWH system · Qiteng Liu 84405995 生成，不是物流供应商文件。",
+    "国家通知 PDF 页脚增加反馈说明，鼓励国家接口人反馈问题和优化建议。",
+    "内部月度报告默认抬头改为 REU Retail logo。",
+    "供应商/仓库方向的出库下单邮件和入库通知邮件保持纯业务内容，不添加内部 logo 或系统署名。"
   ]
 }
