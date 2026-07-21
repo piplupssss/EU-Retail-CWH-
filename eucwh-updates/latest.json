@@ -1,12 +1,13 @@
 {
-  "latest_version": "VN122",
-  "release_time": "2026-07-20 17:14 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN122/VN122_update.zip",
-  "sha256": "aa78046522f62d613713c75f83b365f717fc1aed816a937254ecb1b06c3b7420",
+  "latest_version": "VN123",
+  "release_time": "2026-07-21 15:11 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN123/VN123_update.zip",
+  "sha256": "c7f4344c6c91e85dd1c0da57fd8fd7a90913480cf381abe3fd711aff2a5a0eb5",
   "notes": [
-    "修复升级前已经被 Stock List 校准释放的旧库存占用记录：即使历史 reservation 没有写入 Stock List 释放标记，Product No 详情也会显示临时出库流水。",
-    "这类历史 released reservation 会显示为“临时出库（已被 Stock List 吸收，待月度流水校准）”，并在 ID_OPERACJI 中显示业务 Order Number。",
-    "取消订单和正式 Specyfikacja 月度流水释放的记录不会被当作待校准临时流水显示，避免错误回流。",
-    "继续保留 VN121 的旧 reservation 路径、Order Number 点击弹窗，以及多单/部分校准兼容逻辑。"
+    "出库管理新增“批量创建需求”：先下载系统 Excel 模板，再上传预览，确认后批量创建需求 Todo。",
+    "批量需求支持同一个 Order Number 多行物料；已有 Party ID 会自动使用常用地址中的收货人、地址和联系方式，只有新增 Party ID 才要求填写地址字段。",
+    "批量预览会检查 Order Number 重复、Product No 匹配、数量、发货日期、国家和 Party ID 地址一致性，避免错误需求直接落库。",
+    "批量创建仓库邮件订单时，如果包含罗马尼亚收货订单，邮件正文会自动提示仓库罗马尼亚订单需要价格，并列出订单货值；缺单价时会提示需要人工确认价格。",
+    "继续保持 Stock List 的 Product No 原始大小写显示/导出规则，不改变本地数据库、图片、上传文件和 Packing List 模板边界。"
   ]
 }
