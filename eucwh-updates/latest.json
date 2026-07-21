@@ -1,12 +1,13 @@
 {
-  "latest_version": "VN124",
-  "release_time": "2026-07-21 15:19 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN124/VN124_update.zip",
-  "sha256": "7f07261c1d481c0e7aeb25a77f6e81661ec13818e7c762082ac32a766f699388",
+  "latest_version": "VN125",
+  "release_time": "2026-07-21 16:06 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN125/VN125_update.zip",
+  "sha256": "6a6fd8bd247421678b5809fd469938e73e65f810db72873b4df584520b082542",
   "notes": [
-    "修复编辑需求 Todo 时修改“需求国家”会误清空常用地址、收货人、联系方式和收货地址的问题；现在只有“收货国家”实际变化时才会重新加载并清空收货地址信息。",
-    "保留需求国和收货国分离规则：如果收货国家已手动指定，修改需求国家不会影响已填写的收货地址；如果收货国家仍跟随需求国家自动变化，则继续按新收货国刷新常用地址。",
-    "出库管理需求列表中，需求国或收货国为 RHQ 时显示带阴影加粗的 RHQ 标识，便于和普通国家代码区分。",
-    "物流清单及 Product No 详情中发票匹配物流的小清单同步显示 RHQ 标识；需求国为 RHQ 且收货国不同的场景仍显示“RHQ 需求 → 配送至实际收货国”。"
+    "合并国家通知 PDF 不再要求先回传 STT：需求 Todo 已填写收货信息并匹配 SKU/数量后，即可生成国家核对 PDF。",
+    "未回传 STT 的需求会生成“Shipment Details Confirmation / 发货明细确认”，明确提示国家先核对 SKU、数量和收货信息，STT/Booking 显示为待仓库回复。",
+    "已回传 STT 的订单仍生成正式“Shipment Notification / 发货通知”，并继续刷新 DSV 公开追踪信息、显示 STT、ETA、重量体积等物流字段。",
+    "同一批合并通知可以同时包含国家核对版和正式物流版；尚未匹配 SKU 的需求会被跳过并提示。",
+    "订单履约详情中，SKU 匹配后即可直接点击“生成国家核对通知”，不再需要手动填“待刷新”才能通知国家。"
   ]
 }
