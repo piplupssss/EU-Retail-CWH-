@@ -1,13 +1,12 @@
 {
-  "latest_version": "VN123",
-  "release_time": "2026-07-21 15:11 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN123/VN123_update.zip",
-  "sha256": "c7f4344c6c91e85dd1c0da57fd8fd7a90913480cf381abe3fd711aff2a5a0eb5",
+  "latest_version": "VN124",
+  "release_time": "2026-07-21 15:19 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN124/VN124_update.zip",
+  "sha256": "7f07261c1d481c0e7aeb25a77f6e81661ec13818e7c762082ac32a766f699388",
   "notes": [
-    "出库管理新增“批量创建需求”：先下载系统 Excel 模板，再上传预览，确认后批量创建需求 Todo。",
-    "批量需求支持同一个 Order Number 多行物料；已有 Party ID 会自动使用常用地址中的收货人、地址和联系方式，只有新增 Party ID 才要求填写地址字段。",
-    "批量预览会检查 Order Number 重复、Product No 匹配、数量、发货日期、国家和 Party ID 地址一致性，避免错误需求直接落库。",
-    "批量创建仓库邮件订单时，如果包含罗马尼亚收货订单，邮件正文会自动提示仓库罗马尼亚订单需要价格，并列出订单货值；缺单价时会提示需要人工确认价格。",
-    "继续保持 Stock List 的 Product No 原始大小写显示/导出规则，不改变本地数据库、图片、上传文件和 Packing List 模板边界。"
+    "修复编辑需求 Todo 时修改“需求国家”会误清空常用地址、收货人、联系方式和收货地址的问题；现在只有“收货国家”实际变化时才会重新加载并清空收货地址信息。",
+    "保留需求国和收货国分离规则：如果收货国家已手动指定，修改需求国家不会影响已填写的收货地址；如果收货国家仍跟随需求国家自动变化，则继续按新收货国刷新常用地址。",
+    "出库管理需求列表中，需求国或收货国为 RHQ 时显示带阴影加粗的 RHQ 标识，便于和普通国家代码区分。",
+    "物流清单及 Product No 详情中发票匹配物流的小清单同步显示 RHQ 标识；需求国为 RHQ 且收货国不同的场景仍显示“RHQ 需求 → 配送至实际收货国”。"
   ]
 }
