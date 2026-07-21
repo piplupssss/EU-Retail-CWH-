@@ -1,12 +1,11 @@
 {
-  "latest_version": "VN128",
-  "release_time": "2026-07-21 17:34 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN128/VN128_update.zip",
-  "sha256": "09196504d4e4f0a43b0d8acd2386c216f0245a62753f29b76c0cb071ae7e8c31",
+  "latest_version": "VN129",
+  "release_time": "2026-07-21 17:36 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN129/VN129_update.zip",
+  "sha256": "f94caf50a9fd28115a1479465f52e75d39266b7710d751b93ad73e0d2cb99047",
   "notes": [
-    "修复 DSV 公开追踪中最新节点为 Not delivered / Refused 时被误判为已交付的问题；PLLOZ607016403 这类“未交付尝试”现在会识别为运输中或按超期规则识别为异常。",
-    "批量核实状态更新时，人工标记已交付与系统自动识别已交付分离：人工标记会锁定，自动识别不会永久锁死，后续核实确认未交付时会释放错误的实际交付日期。",
-    "物流清单移入回收站前端只提交当前显示为异常单的勾选项；混选非异常单时会自动忽略非异常单，避免整批请求被后端 400 拒绝。",
-    "后端仍保留“只有当前显示为异常单才可移入回收站”的安全限制，不放宽回收站边界。"
+    "补强 VN128 的 DSV Not delivered 修复：旧版本曾自动锁定为已交付、但没有人工交付标记的运单，后续批量核实如果读取到 Not delivered / Refused，会自动释放旧锁并改回运输中或异常。",
+    "人工标记已交付继续保留人工锁定，不会被自动核实覆盖；新旧数据用 manual_status='delivered' 区分。",
+    "继续保留 VN128 的回收站混选保护：前端只提交当前显示为异常单的勾选项，后端仍限制只有异常单可作废。"
   ]
 }
