@@ -1,12 +1,13 @@
 {
-  "latest_version": "VN135",
-  "release_time": "2026-07-22 10:45 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN135/VN135_update.zip",
-  "sha256": "bd8b01425802986ab3d53cb6cfbbd78dd8ac8834da308d35f3e48937c62beb8c",
+  "latest_version": "VN136",
+  "release_time": "2026-07-22 11:00 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN136/VN136_update.zip",
+  "sha256": "26e72eadc247739cdadc4a94f5fcfc0ab6a884e88f56b2c13ed5594e9b6048e0",
   "notes": [
-    "补强库存临时扣减清理算法：按“已被 Stock List/月度流水吸收数量、仍 open 的临时出库数量、当前 active reserved 数量”计算应释放数量，避免部分校准场景误释放正常剩余扣减。",
-    "新增数据管理中心“库存占用修复”工具：输入 Order Number 可先检查会释放哪些 Product No 和数量，再输入维护密码确认执行。",
-    "修复动作只把错误 active reservation 改为 released，不删除临时出库流水、不删除 Stock List 校准记录，Product No 详情仍保留历史。",
-    "Order Number 匹配同时支持业务订单号、REQ 号、内部 DO 号和订单名称，适合处理 PC 本地已发生的数据问题。"
+    "修复 VN135 在部分 PC 本地数据上提示“没有发现可释放重复扣减”的问题：旧同步曾把已被 Stock List 校准的 stock_reconciled 记录再次标成 void，VN136 会识别这类带 reconciled_at 的旧校准证据。",
+    "按 Order Number 修复库存占用时，改为用“订单最终数量 - 已被校准吸收数量”计算仍应保留的正常扣减，只释放超出的 active reservation，支持同一 SKU 多单、多次扣减和部分校准。",
+    "后续重建订单临时出库时只作废 open 临时行，不再覆盖 stock_reconciled / reconciled 校准记录，避免校准证据再次丢失。",
+    "物流状态从误判已交付纠正回运输中时，也会识别旧的 void + reconciled_at 校准证据，已被库存清单吸收的数量不会重新激活成红色临时扣减。",
+    "数据管理中心“库存占用修复”仍只把错误 active reservation 改为 released，不删除临时出库流水、不删除 Stock List 或月度流水校准记录。"
   ]
 }
