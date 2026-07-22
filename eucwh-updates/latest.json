@@ -1,12 +1,11 @@
 {
-  "latest_version": "VN130",
-  "release_time": "2026-07-22 09:45 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN130/VN130_update.zip",
-  "sha256": "054b672b7d335e4030fa7166eb42aeb4ac0413ce5df051c26e7fa13dd0cb2e2e",
+  "latest_version": "VN131",
+  "release_time": "2026-07-22 09:48 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN131/VN131_update.zip",
+  "sha256": "315399ac58cbaa1fd1835f7ad8c1d7014af06cc47d8798a08e8838e46d3caaa2",
   "notes": [
-    "批量核实改为智能增量：默认只核实最近 45 天内仍在流转、到 ETA、超期、旧锁可疑或缺关键追踪事实的运单，不再每次重新扫描几百条历史物流。",
-    "如果在物流清单勾选了具体运单，批量核实只处理勾选项，便于单票复查。",
-    "新增“强制重扫”按钮，需要完整重查全部未闭环运单时才使用；日常按钮保持快速增量。",
-    "核实进度提示会显示本次模式、实际核实数量，以及刚核实过或未到核实时点而跳过的数量。"
+    "按用户确认口径收窄日常批量核实范围：默认只扫最近 14 天、当前显示为异常单、当前显示为运输中，以及用户勾选的运单。",
+    "默认批量核实不再因为 45 天窗口或历史 ETA 到期而扫大量旧物流；本地测试默认队列从 51 单降到 25 单。",
+    "勾选模式继续只处理勾选运单；强制重扫仍保留，用于需要完整重查全部未闭环运单的特殊场景。"
   ]
 }
