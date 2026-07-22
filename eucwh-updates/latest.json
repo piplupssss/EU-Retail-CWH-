@@ -1,11 +1,12 @@
 {
-  "latest_version": "VN131",
-  "release_time": "2026-07-22 09:48 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN131/VN131_update.zip",
-  "sha256": "315399ac58cbaa1fd1835f7ad8c1d7014af06cc47d8798a08e8838e46d3caaa2",
+  "latest_version": "VN132",
+  "release_time": "2026-07-22 10:07 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN132/VN132_update.zip",
+  "sha256": "7c152f3e219794d3818e667cdc21912d28767a020c0b78323c2402e5816d9bba",
   "notes": [
-    "按用户确认口径收窄日常批量核实范围：默认只扫最近 14 天、当前显示为异常单、当前显示为运输中，以及用户勾选的运单。",
-    "默认批量核实不再因为 45 天窗口或历史 ETA 到期而扫大量旧物流；本地测试默认队列从 51 单降到 25 单。",
-    "勾选模式继续只处理勾选运单；强制重扫仍保留，用于需要完整重查全部未闭环运单的特殊场景。"
+    "回收站作废规则调整：非异常单如果选择“供应商下错单，取消订单”或“需求变更，取消订单”，允许移入回收站，用于处理下错单、取消单等业务作废场景。",
+    "异常类原因仍要求当前显示为异常单，避免普通运输单被误用“误报异常”等原因作废。",
+    "已交付运单不能直接作废；如确认取消，需要先撤销交付标记再按取消原因处理，避免影响已闭环和发票验收数据。",
+    "前端不再提前拦截非异常单，作废弹窗会提示非异常单仅支持取消类原因。"
   ]
 }
