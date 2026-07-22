@@ -1,12 +1,13 @@
 {
-  "latest_version": "VN139",
-  "release_time": "2026-07-22 12:37 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN139/VN139_update.zip",
-  "sha256": "6af3200a63834d5306942a066d3c404ea21b7b57b13e17ea4b4e3cc0f50d7ee1",
+  "latest_version": "VN140",
+  "release_time": "2026-07-22 12:50 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN140/VN140_update.zip",
+  "sha256": "9b461503cc8196d86649d20f0a9e382f6ae77df8e29a354deca1872390ff9770",
   "notes": [
-    "库存清单加载失败时不再一直显示“加载中”，会在表格内直接显示 API 错误内容，便于判断是旧 PC 数据库 schema、接口异常还是登录状态问题。",
-    "出库管理需求 Todo 加载失败时不再静默显示空表，会在表格内显示“需求 Todo 加载失败”及真实错误文本。",
-    "统一 apiGet/apiPost/apiPut/apiDelete 的错误处理：HTTP 401 会重新要求登录，HTTP 500/404 会保留后端返回内容，避免前端吞错。",
-    "Mac 本机浏览器回归验证：库存清单可渲染 20 行，出库管理可渲染 2 条需求 Todo，VN139 错误处理不影响正常流程。"
+    "修复旧 PC 数据库缺少 logistics shipments.import_time 等物流字段时，库存清单接口直接 500 的问题；启动迁移只补缺失字段并回填更新时间，不覆盖物流、库存、图片或模板数据。",
+    "修复旧 WMS 数据库缺少 delivery_requests、delivery_request_items、delivery_orders 新字段时，出库管理需求 Todo 接口 500 的问题；批量需求、需求国/收货国和物料行字段会在启动时自动补齐。",
+    "SQLite 旧表补 created_at/updated_at/import_time 这类时间字段时不再使用非法 CURRENT_TIMESTAMP 默认值，避免升级后初始化失败。",
+    "库存清单读取物流更新时间时增加兼容兜底：如果旧物流表字段异常，仍优先返回库存清单数据。",
+    "所有 /api/ 接口未捕获错误改为返回 JSON，包含 error_type 和 path；以后 PC 再出现 500，页面会显示可定位的后端错误，而不是通用 HTML 500。"
   ]
 }
