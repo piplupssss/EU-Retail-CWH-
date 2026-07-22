@@ -1,13 +1,12 @@
 {
-  "latest_version": "VN140",
-  "release_time": "2026-07-22 12:50 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN140/VN140_update.zip",
-  "sha256": "9b461503cc8196d86649d20f0a9e382f6ae77df8e29a354deca1872390ff9770",
+  "latest_version": "VN141",
+  "release_time": "2026-07-22 12:55 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN141/VN141_update.zip",
+  "sha256": "fd1c280ef19cba3eeeef0f3180d1425f46a7f90c84de5eae2aff664c968480b3",
   "notes": [
-    "修复旧 PC 数据库缺少 logistics shipments.import_time 等物流字段时，库存清单接口直接 500 的问题；启动迁移只补缺失字段并回填更新时间，不覆盖物流、库存、图片或模板数据。",
-    "修复旧 WMS 数据库缺少 delivery_requests、delivery_request_items、delivery_orders 新字段时，出库管理需求 Todo 接口 500 的问题；批量需求、需求国/收货国和物料行字段会在启动时自动补齐。",
-    "SQLite 旧表补 created_at/updated_at/import_time 这类时间字段时不再使用非法 CURRENT_TIMESTAMP 默认值，避免升级后初始化失败。",
-    "库存清单读取物流更新时间时增加兼容兜底：如果旧物流表字段异常，仍优先返回库存清单数据。",
-    "所有 /api/ 接口未捕获错误改为返回 JSON，包含 error_type 和 path；以后 PC 再出现 500，页面会显示可定位的后端错误，而不是通用 HTML 500。"
+    "修复 PC 端升级/导入/批量核实后页面可能出现 database is locked 的问题：物流库和 WMS 库连接统一改为 60 秒 busy_timeout，避免短暂写锁直接导致 API 500。",
+    "统一启用 WAL 与 NORMAL synchronous，减少库存清单、需求 Todo、批量核实、导入和导出之间的读写互相阻塞。",
+    "启动迁移、主 API 请求、数据库备份、物流导入、核心备份、库存导出、库存报表导出和批量核实后台线程全部改用同一 SQLite 连接策略。",
+    "本次只调整数据库连接和锁等待策略，不修改库存扣减、Stock List 校准、临时流水、图片、模板或本地业务数据。"
   ]
 }
