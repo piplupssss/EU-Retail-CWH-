@@ -1,13 +1,14 @@
 {
-  "latest_version": "VN137",
-  "release_time": "2026-07-22 11:38 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN137/VN137_update.zip",
-  "sha256": "e30ce6f6764f3f3c3aa4ebab3e79d8c206f3f48953a62eb1510a3f85f676f2fc",
+  "latest_version": "VN138",
+  "release_time": "2026-07-22 11:48 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN138/VN138_update.zip",
+  "sha256": "fc00188964f84e0d9297cd542cda4a6a642f6f14fb87d289deee02b221f84f29",
   "notes": [
-    "数据管理中心“库存占用修复”增强：检查结果会列出该 Order Number 当前 active 的库存扣减，即使系统没有识别到 Stock List/月度流水校准证据，也能看到需要处理的 SKU。",
-    "“仍应扣减”列改为可手动输入。确认执行时系统按“当前扣减 - 仍应扣减”释放差额，用于处理 PC 本地无法自动识别但业务上已确认应释放的重复扣减。",
-    "执行前会按手动输入重新 dry-run 计算释放数量并弹窗确认；执行仍需要维护密码，并会先备份 WMS 数据库。",
-    "手动修复只修改 inventory_reservations 的 active/released 状态，不删除 pending_inventory_adjustments 临时出库流水，也不删除 Stock List 或月度流水校准记录。",
-    "修复工具中的 Product No 显示改为保留数据库原始大小写；匹配仍按规范化 Product No 进行。"
+    "修正库存占用修复工具的“当前扣减”口径：与库存清单一致，取 active reservation 和 open pending 临时出库中的较大值；只有 pending open=-6、reservation=0 的订单现在也会显示当前扣减 6。",
+    "库存占用修复执行时会同时处理 open pending 临时出库：不删除流水，只把释放部分改为 stock_reconciled，Product No 详情仍显示“临时出库（已被 Stock List 吸收，待月度流水校准）”。",
+    "供应商 Stock List 导入现在会回填已有 SKU 的 Product Description、Category、Category 2，避免新增/入库先建的物料在后续 Stock List 刷新后仍缺主数据信息。",
+    "库存清单默认仍不铺开全部零库存历史 SKU；但输入搜索词时允许命中零库存仓库记录，便于按 Product No 查历史信息。",
+    "Product No 详情增加历史兜底：如果库存主数据/当前库存没有命中，但入库通知、临时出入流水、正式出入流水存在，仍可打开详情并显示可用的品类、仓库、入库通知和近期流水。",
+    "出入流水列表和导出改为按规范化 Product No 关联主数据/仓库信息，解决大小写、空格、横线差异导致 Category、Category 2、归属国家、仓库列为空的问题。"
   ]
 }
