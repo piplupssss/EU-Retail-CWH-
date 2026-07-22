@@ -1,14 +1,15 @@
 {
-  "latest_version": "VN143",
-  "release_time": "2026-07-22 13:28 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN143/VN143_update.zip",
-  "sha256": "de0e318c9ff0f1c9b515b21c17e134197ffdcd72f0e502dd679fbd89442c7803",
+  "latest_version": "VN144",
+  "release_time": "2026-07-22 13:57 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN144/VN144_update.zip",
+  "sha256": "2828f262b46740903b1bfcf545a06bddb5e1103e26b38a8844a7a03feaea651c",
   "notes": [
-    "修复需求 Todo 仍然加载失败或报 database is locked：列表加载不再同步物流状态、写回需求国家或提交 WMS/物流数据库。",
-    "需求 Todo 详情和订单履约详情恢复为纯读取；打开页面不再创建兼容订单、修改状态或抢占数据库写锁。",
-    "物流状态与订单状态仍在用户明确执行批量核实后同步；批量核实继续刷新物流时间线，不影响既有业务流程。",
-    "物流状态同步不再附带全库库存占用释放扫描；Stock List、月度流水和手动订单修复继续各自负责库存校准，已有临时流水不会因打开 Todo 被删除或重做。",
-    "新增发布回归门禁：如果以后把物流同步、库存释放、创建订单或 commit 再挂回 Todo 列表/详情读取，发布检查会直接失败。",
-    "本次更新不删除、覆盖或迁移 PC 的需求、订单、库存、临时流水、图片、模板或本地数据库；此前点击订单库存释放不是 Todo 加载失败的根因。"
+    "库存占用修复改为默认不选择任何行，必须逐个 Product No 勾选；只处理所选 SKU，同一订单其他正常扣减不受影响。",
+    "确认释放前生成安全预览凭证并再次锁库核对；预览后 reservation、临时出库或数量有任何变化都会整次拒绝执行，成功执行前自动备份 WMS 数据库，临时流水不删除。",
+    "修复旧版本 Stock List 校准后隐藏临时入库流水和临时 Last Inbound Date 的问题：从仍保留的入库通知恢复缺失证据；Stock List 后保留 stock_reconciled，只有月度 Specyfikacja 才转为 reconciled。",
+    "统一 Stock List、月度流水、临时入库/出库和 reservation 的 Product No 规范化匹配；大小写、空格、横线差异不再阻止月度正式流水校准。",
+    "首次启动执行一次只增补不覆盖的历史恢复：从入库通知、SKU 资料、正式流水和临时记录恢复缺失的零库存 product_master 与 warehouse_inventory=0 查询索引，不修改任何正库存数量。",
+    "零库存 Product No 可通过库存清单搜索并打开详情；出入库流水补全可恢复的 Product Description、Category、Category 2、归属国家和仓库，历史正式流水默认归属 Lodz warehouse。",
+    "新增隔离数据库发布门禁，覆盖 Stock List→月度流水边界、旧入库记录恢复、零库存详情/流水补全、逐 SKU 释放、预览过期拒绝、自动备份和不删除临时流水。"
   ]
 }
