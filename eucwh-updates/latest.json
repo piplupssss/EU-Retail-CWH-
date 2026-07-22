@@ -1,13 +1,13 @@
 {
-  "latest_version": "VN136",
-  "release_time": "2026-07-22 11:00 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN136/VN136_update.zip",
-  "sha256": "26e72eadc247739cdadc4a94f5fcfc0ab6a884e88f56b2c13ed5594e9b6048e0",
+  "latest_version": "VN137",
+  "release_time": "2026-07-22 11:38 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN137/VN137_update.zip",
+  "sha256": "e30ce6f6764f3f3c3aa4ebab3e79d8c206f3f48953a62eb1510a3f85f676f2fc",
   "notes": [
-    "修复 VN135 在部分 PC 本地数据上提示“没有发现可释放重复扣减”的问题：旧同步曾把已被 Stock List 校准的 stock_reconciled 记录再次标成 void，VN136 会识别这类带 reconciled_at 的旧校准证据。",
-    "按 Order Number 修复库存占用时，改为用“订单最终数量 - 已被校准吸收数量”计算仍应保留的正常扣减，只释放超出的 active reservation，支持同一 SKU 多单、多次扣减和部分校准。",
-    "后续重建订单临时出库时只作废 open 临时行，不再覆盖 stock_reconciled / reconciled 校准记录，避免校准证据再次丢失。",
-    "物流状态从误判已交付纠正回运输中时，也会识别旧的 void + reconciled_at 校准证据，已被库存清单吸收的数量不会重新激活成红色临时扣减。",
-    "数据管理中心“库存占用修复”仍只把错误 active reservation 改为 released，不删除临时出库流水、不删除 Stock List 或月度流水校准记录。"
+    "数据管理中心“库存占用修复”增强：检查结果会列出该 Order Number 当前 active 的库存扣减，即使系统没有识别到 Stock List/月度流水校准证据，也能看到需要处理的 SKU。",
+    "“仍应扣减”列改为可手动输入。确认执行时系统按“当前扣减 - 仍应扣减”释放差额，用于处理 PC 本地无法自动识别但业务上已确认应释放的重复扣减。",
+    "执行前会按手动输入重新 dry-run 计算释放数量并弹窗确认；执行仍需要维护密码，并会先备份 WMS 数据库。",
+    "手动修复只修改 inventory_reservations 的 active/released 状态，不删除 pending_inventory_adjustments 临时出库流水，也不删除 Stock List 或月度流水校准记录。",
+    "修复工具中的 Product No 显示改为保留数据库原始大小写；匹配仍按规范化 Product No 进行。"
   ]
 }
