@@ -1,15 +1,15 @@
 {
-  "latest_version": "VN144",
-  "release_time": "2026-07-22 13:57 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN144/VN144_update.zip",
-  "sha256": "2828f262b46740903b1bfcf545a06bddb5e1103e26b38a8844a7a03feaea651c",
+  "latest_version": "VN145",
+  "release_time": "2026-07-22 14:15 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN145/VN145_update.zip",
+  "sha256": "3ea0dd0c33ad23d02c76557457af49f23fe7e57b949dbcd105f0e8200bad360e",
   "notes": [
-    "库存占用修复改为默认不选择任何行，必须逐个 Product No 勾选；只处理所选 SKU，同一订单其他正常扣减不受影响。",
-    "确认释放前生成安全预览凭证并再次锁库核对；预览后 reservation、临时出库或数量有任何变化都会整次拒绝执行，成功执行前自动备份 WMS 数据库，临时流水不删除。",
-    "修复旧版本 Stock List 校准后隐藏临时入库流水和临时 Last Inbound Date 的问题：从仍保留的入库通知恢复缺失证据；Stock List 后保留 stock_reconciled，只有月度 Specyfikacja 才转为 reconciled。",
-    "统一 Stock List、月度流水、临时入库/出库和 reservation 的 Product No 规范化匹配；大小写、空格、横线差异不再阻止月度正式流水校准。",
-    "首次启动执行一次只增补不覆盖的历史恢复：从入库通知、SKU 资料、正式流水和临时记录恢复缺失的零库存 product_master 与 warehouse_inventory=0 查询索引，不修改任何正库存数量。",
-    "零库存 Product No 可通过库存清单搜索并打开详情；出入库流水补全可恢复的 Product Description、Category、Category 2、归属国家和仓库，历史正式流水默认归属 Lodz warehouse。",
-    "新增隔离数据库发布门禁，覆盖 Stock List→月度流水边界、旧入库记录恢复、零库存详情/流水补全、逐 SKU 释放、预览过期拒绝、自动备份和不删除临时流水。"
+    "定位并移除 VN138 后物流清单和五个物流看板 GET 接口中的隐藏 RHQ 发票运单对账写入；打开清单、看板和汇总不再执行 UPDATE/COMMIT 或争抢 SQLite 写锁，RHQ 对账仍由明确的发票导入和范围维护动作负责。",
+    "取消登录启动时对物流、报告、库存分类设置的提前全量加载；库存首屏只请求一次实际库存清单、一次库存规模和一次轻量筛选，进入相应页面时再按需加载。",
+    "物流清单继续默认显示全部记录，但页面改用精简响应；当前 386 票测试数据的 JSON 从约 662 KB 降至约 233 KB，减少约 65%，Order Number、STT、急单、RHQ、状态、国家、重量体积和验收信息保持不变。",
+    "物流与库存表头筛选改用独立轻量接口，不再为了生成下拉选项重复读取完整清单；年份筛选也复用轻量物流选项，不再额外执行国家排行统计。",
+    "快速连续切换物流筛选时会取消上一条尚未完成的请求，并丢弃过期响应，避免旧结果晚到后再次重绘或覆盖新筛选。",
+    "新增物流读取/性能发布门禁，禁止以后把 commit 或 RHQ 对账重新挂回清单与看板 GET，并禁止筛选器恢复为全量清单启动；实机回归覆盖登录、库存清单、386 票物流清单、状态筛选、需求 Todo 和切页，控制台错误与失败请求均为 0。",
+    "本次更新不修改库存数量、临时扣减、出入库流水、物流状态、发票数据、图片、模板或 PC 本地数据库；库存占用修复仍保持 VN144 的逐 SKU 勾选、预览复核和自动备份规则。"
   ]
 }
