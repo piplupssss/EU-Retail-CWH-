@@ -2,7 +2,7 @@
   "latest_version": "VN133",
   "release_time": "2026-07-22 10:22 CEST",
   "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN133/VN133_update.zip",
-  "sha256": "fb644feab78cb321a39b10abc53b932b9174ccc34af215374d0418d11e0f2760",
+  "sha256": "62c5f58ff757636d335321d6cd5a274eec8750621fc98aef6b8a763ef694b573",
   "notes": [
     "修复物流批量核实把误判已交付的运单纠正回运输中后，已被供应商 Stock List 校准释放的临时扣减又重新显示为库存占用的问题。",
     "状态回退时按 SKU 判断临时出库是否已被 Stock List 或月度 Specyfikacja 流水吸收；已吸收部分保持 released，不再参与库存清单的红色扣减。",
