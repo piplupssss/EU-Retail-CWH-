@@ -1,14 +1,12 @@
 {
-  "latest_version": "VN138",
-  "release_time": "2026-07-22 11:48 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN138/VN138_update.zip",
-  "sha256": "fc00188964f84e0d9297cd542cda4a6a642f6f14fb87d289deee02b221f84f29",
+  "latest_version": "VN139",
+  "release_time": "2026-07-22 12:37 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN139/VN139_update.zip",
+  "sha256": "6af3200a63834d5306942a066d3c404ea21b7b57b13e17ea4b4e3cc0f50d7ee1",
   "notes": [
-    "修正库存占用修复工具的“当前扣减”口径：与库存清单一致，取 active reservation 和 open pending 临时出库中的较大值；只有 pending open=-6、reservation=0 的订单现在也会显示当前扣减 6。",
-    "库存占用修复执行时会同时处理 open pending 临时出库：不删除流水，只把释放部分改为 stock_reconciled，Product No 详情仍显示“临时出库（已被 Stock List 吸收，待月度流水校准）”。",
-    "供应商 Stock List 导入现在会回填已有 SKU 的 Product Description、Category、Category 2，避免新增/入库先建的物料在后续 Stock List 刷新后仍缺主数据信息。",
-    "库存清单默认仍不铺开全部零库存历史 SKU；但输入搜索词时允许命中零库存仓库记录，便于按 Product No 查历史信息。",
-    "Product No 详情增加历史兜底：如果库存主数据/当前库存没有命中，但入库通知、临时出入流水、正式出入流水存在，仍可打开详情并显示可用的品类、仓库、入库通知和近期流水。",
-    "出入流水列表和导出改为按规范化 Product No 关联主数据/仓库信息，解决大小写、空格、横线差异导致 Category、Category 2、归属国家、仓库列为空的问题。"
+    "库存清单加载失败时不再一直显示“加载中”，会在表格内直接显示 API 错误内容，便于判断是旧 PC 数据库 schema、接口异常还是登录状态问题。",
+    "出库管理需求 Todo 加载失败时不再静默显示空表，会在表格内显示“需求 Todo 加载失败”及真实错误文本。",
+    "统一 apiGet/apiPost/apiPut/apiDelete 的错误处理：HTTP 401 会重新要求登录，HTTP 500/404 会保留后端返回内容，避免前端吞错。",
+    "Mac 本机浏览器回归验证：库存清单可渲染 20 行，出库管理可渲染 2 条需求 Todo，VN139 错误处理不影响正常流程。"
   ]
 }
