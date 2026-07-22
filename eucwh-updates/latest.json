@@ -1,14 +1,14 @@
 {
-  "latest_version": "VN142",
-  "release_time": "2026-07-22 13:11 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN142/VN142_update.zip",
-  "sha256": "18c2387eead82a7e89f510453e82f78821090e89f7f721bdae8e42f25d851406",
+  "latest_version": "VN143",
+  "release_time": "2026-07-22 13:28 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN143/VN143_update.zip",
+  "sha256": "de0e318c9ff0f1c9b515b21c17e134197ffdcd72f0e502dd679fbd89442c7803",
   "notes": [
-    "修复 VN138 引入的库存清单/Product No 详情加载回归：读取接口不再自动执行全局库存占用释放修复，避免打开页面时写 WMS 数据库导致长时间加载或 database is locked。",
-    "库存清单和 Product No 详情恢复为只读查询；库存占用修复仍保留在明确的修复动作、Stock List/月度流水校准和物流同步流程中，不再绑在页面加载上。",
-    "启动初始化不再每次把 warehouse_inventory 全量同步覆盖到 product_master，不再重写已有 Product No 主数据、Category、Category 2、价格和 updated_at，避免启动阶段持有大写锁。",
-    "修正 VN141 的锁处理方向：普通页面请求不再每次连接时反复执行 journal_mode=WAL 这类写 pragma；WAL 只在启动初始化时设置。",
-    "普通页面数据库等待时间改为 15 秒，避免锁未释放时页面长时间假死；导入、备份、迁移、批量核实等长写操作仍保留 60 秒等待。",
-    "本次修复只改变读取接口和 SQLite 连接策略，不删除/覆盖库存、临时流水、物流、图片、模板或本地数据库。"
+    "修复需求 Todo 仍然加载失败或报 database is locked：列表加载不再同步物流状态、写回需求国家或提交 WMS/物流数据库。",
+    "需求 Todo 详情和订单履约详情恢复为纯读取；打开页面不再创建兼容订单、修改状态或抢占数据库写锁。",
+    "物流状态与订单状态仍在用户明确执行批量核实后同步；批量核实继续刷新物流时间线，不影响既有业务流程。",
+    "物流状态同步不再附带全库库存占用释放扫描；Stock List、月度流水和手动订单修复继续各自负责库存校准，已有临时流水不会因打开 Todo 被删除或重做。",
+    "新增发布回归门禁：如果以后把物流同步、库存释放、创建订单或 commit 再挂回 Todo 列表/详情读取，发布检查会直接失败。",
+    "本次更新不删除、覆盖或迁移 PC 的需求、订单、库存、临时流水、图片、模板或本地数据库；此前点击订单库存释放不是 Todo 加载失败的根因。"
   ]
 }
