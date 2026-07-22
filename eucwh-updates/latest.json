@@ -1,12 +1,14 @@
 {
-  "latest_version": "VN141",
-  "release_time": "2026-07-22 12:55 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN141/VN141_update.zip",
-  "sha256": "fd1c280ef19cba3eeeef0f3180d1425f46a7f90c84de5eae2aff664c968480b3",
+  "latest_version": "VN142",
+  "release_time": "2026-07-22 13:11 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN142/VN142_update.zip",
+  "sha256": "18c2387eead82a7e89f510453e82f78821090e89f7f721bdae8e42f25d851406",
   "notes": [
-    "修复 PC 端升级/导入/批量核实后页面可能出现 database is locked 的问题：物流库和 WMS 库连接统一改为 60 秒 busy_timeout，避免短暂写锁直接导致 API 500。",
-    "统一启用 WAL 与 NORMAL synchronous，减少库存清单、需求 Todo、批量核实、导入和导出之间的读写互相阻塞。",
-    "启动迁移、主 API 请求、数据库备份、物流导入、核心备份、库存导出、库存报表导出和批量核实后台线程全部改用同一 SQLite 连接策略。",
-    "本次只调整数据库连接和锁等待策略，不修改库存扣减、Stock List 校准、临时流水、图片、模板或本地业务数据。"
+    "修复 VN138 引入的库存清单/Product No 详情加载回归：读取接口不再自动执行全局库存占用释放修复，避免打开页面时写 WMS 数据库导致长时间加载或 database is locked。",
+    "库存清单和 Product No 详情恢复为只读查询；库存占用修复仍保留在明确的修复动作、Stock List/月度流水校准和物流同步流程中，不再绑在页面加载上。",
+    "启动初始化不再每次把 warehouse_inventory 全量同步覆盖到 product_master，不再重写已有 Product No 主数据、Category、Category 2、价格和 updated_at，避免启动阶段持有大写锁。",
+    "修正 VN141 的锁处理方向：普通页面请求不再每次连接时反复执行 journal_mode=WAL 这类写 pragma；WAL 只在启动初始化时设置。",
+    "普通页面数据库等待时间改为 15 秒，避免锁未释放时页面长时间假死；导入、备份、迁移、批量核实等长写操作仍保留 60 秒等待。",
+    "本次修复只改变读取接口和 SQLite 连接策略，不删除/覆盖库存、临时流水、物流、图片、模板或本地数据库。"
   ]
 }
