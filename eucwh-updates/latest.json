@@ -1,11 +1,12 @@
 {
-  "latest_version": "VN129",
-  "release_time": "2026-07-21 17:36 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN129/VN129_update.zip",
-  "sha256": "f94caf50a9fd28115a1479465f52e75d39266b7710d751b93ad73e0d2cb99047",
+  "latest_version": "VN130",
+  "release_time": "2026-07-22 09:45 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN130/VN130_update.zip",
+  "sha256": "054b672b7d335e4030fa7166eb42aeb4ac0413ce5df051c26e7fa13dd0cb2e2e",
   "notes": [
-    "补强 VN128 的 DSV Not delivered 修复：旧版本曾自动锁定为已交付、但没有人工交付标记的运单，后续批量核实如果读取到 Not delivered / Refused，会自动释放旧锁并改回运输中或异常。",
-    "人工标记已交付继续保留人工锁定，不会被自动核实覆盖；新旧数据用 manual_status='delivered' 区分。",
-    "继续保留 VN128 的回收站混选保护：前端只提交当前显示为异常单的勾选项，后端仍限制只有异常单可作废。"
+    "批量核实改为智能增量：默认只核实最近 45 天内仍在流转、到 ETA、超期、旧锁可疑或缺关键追踪事实的运单，不再每次重新扫描几百条历史物流。",
+    "如果在物流清单勾选了具体运单，批量核实只处理勾选项，便于单票复查。",
+    "新增“强制重扫”按钮，需要完整重查全部未闭环运单时才使用；日常按钮保持快速增量。",
+    "核实进度提示会显示本次模式、实际核实数量，以及刚核实过或未到核实时点而跳过的数量。"
   ]
 }
