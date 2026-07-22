@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN132",
-  "release_time": "2026-07-22 10:07 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN132/VN132_update.zip",
-  "sha256": "7c152f3e219794d3818e667cdc21912d28767a020c0b78323c2402e5816d9bba",
+  "latest_version": "VN133",
+  "release_time": "2026-07-22 10:22 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN133/VN133_update.zip",
+  "sha256": "d6774ff470d422acd0ebc2c76bc2a6d2ebae04e13eeebf14ab73cd0dd0d43eff",
   "notes": [
-    "回收站作废规则调整：非异常单如果选择“供应商下错单，取消订单”或“需求变更，取消订单”，允许移入回收站，用于处理下错单、取消单等业务作废场景。",
-    "异常类原因仍要求当前显示为异常单，避免普通运输单被误用“误报异常”等原因作废。",
-    "已交付运单不能直接作废；如确认取消，需要先撤销交付标记再按取消原因处理，避免影响已闭环和发票验收数据。",
-    "前端不再提前拦截非异常单，作废弹窗会提示非异常单仅支持取消类原因。"
+    "修复物流批量核实把误判已交付的运单纠正回运输中后，已被供应商 Stock List 校准释放的临时扣减又重新显示为库存占用的问题。",
+    "状态回退时按 SKU 判断临时出库是否已被 Stock List 或月度 Specyfikacja 流水吸收；已吸收部分保持 released，不再参与库存清单的红色扣减。",
+    "同一 SKU 多单/多次扣减支持部分校准：只恢复尚未被校准吸收的剩余占用，已校准的数量继续留在近期出入流水作为已吸收临时出库记录。",
+    "批量核实写入物流状态后立即同步 WMS 订单和库存占用，不再等打开出库管理页面才被动同步。"
   ]
 }
