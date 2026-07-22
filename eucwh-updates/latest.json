@@ -1,13 +1,13 @@
 {
-  "latest_version": "VN133",
-  "release_time": "2026-07-22 10:22 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN133/VN133_update.zip",
-  "sha256": "62c5f58ff757636d335321d6cd5a274eec8750621fc98aef6b8a763ef694b573",
+  "latest_version": "VN134",
+  "release_time": "2026-07-22 10:34 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN134/VN134_update.zip",
+  "sha256": "dc63b4c7cf9f3c02c3c2044e3f7fce35efb22afe568aaddfd9caad21d583b9e1",
   "notes": [
-    "修复物流批量核实把误判已交付的运单纠正回运输中后，已被供应商 Stock List 校准释放的临时扣减又重新显示为库存占用的问题。",
-    "状态回退时按 SKU 判断临时出库是否已被 Stock List 或月度 Specyfikacja 流水吸收；已吸收部分保持 released，不再参与库存清单的红色扣减。",
-    "同一 SKU 多单/多次扣减支持部分校准：只恢复尚未被校准吸收的剩余占用，已校准的数量继续留在近期出入流水作为已吸收临时出库记录。",
-    "批量核实写入物流状态后立即同步 WMS 订单和库存占用，不再等打开出库管理页面才被动同步。",
-    "库存清单和 Product No 详情加载前会清理既有错误 active reservation；升级后已产生的二次扣减也会被自动释放。"
+    "批量核实运单时同步刷新本地 DSV tracking snapshot：只要 DSV 本次不是抓取错误，就把当前阶段和 Shipment Status History 写入统一追踪缓存，订单/STT 物流详情会直接读取这份时间线。",
+    "批量核实进度结果新增 tracking snapshot 写入数量和物流时间线节点数量，便于确认本次是否实际刷新了时间线。",
+    "入库管理新增物料后，库存清单和 Product No 详情显示来自入库通知的临时 Last Inbound Date，并以“临时”标识区分正式 Stock List 日期。",
+    "Product No 详情的近期出入流水中，临时入库的 ID_OPERACJI 改为入库管理的预计到货日期；入库通知参考号保留在对象说明中。",
+    "临时入库仍不改写正式库存数量；后续供应商 Stock List 或月度 Specyfikacja 流水继续负责正式校准。"
   ]
 }
