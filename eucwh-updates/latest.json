@@ -1,13 +1,12 @@
 {
-  "latest_version": "VN134",
-  "release_time": "2026-07-22 10:34 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN134/VN134_update.zip",
-  "sha256": "dc63b4c7cf9f3c02c3c2044e3f7fce35efb22afe568aaddfd9caad21d583b9e1",
+  "latest_version": "VN135",
+  "release_time": "2026-07-22 10:45 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN135/VN135_update.zip",
+  "sha256": "bd8b01425802986ab3d53cb6cfbbd78dd8ac8834da308d35f3e48937c62beb8c",
   "notes": [
-    "批量核实运单时同步刷新本地 DSV tracking snapshot：只要 DSV 本次不是抓取错误，就把当前阶段和 Shipment Status History 写入统一追踪缓存，订单/STT 物流详情会直接读取这份时间线。",
-    "批量核实进度结果新增 tracking snapshot 写入数量和物流时间线节点数量，便于确认本次是否实际刷新了时间线。",
-    "入库管理新增物料后，库存清单和 Product No 详情显示来自入库通知的临时 Last Inbound Date，并以“临时”标识区分正式 Stock List 日期。",
-    "Product No 详情的近期出入流水中，临时入库的 ID_OPERACJI 改为入库管理的预计到货日期；入库通知参考号保留在对象说明中。",
-    "临时入库仍不改写正式库存数量；后续供应商 Stock List 或月度 Specyfikacja 流水继续负责正式校准。"
+    "补强库存临时扣减清理算法：按“已被 Stock List/月度流水吸收数量、仍 open 的临时出库数量、当前 active reserved 数量”计算应释放数量，避免部分校准场景误释放正常剩余扣减。",
+    "新增数据管理中心“库存占用修复”工具：输入 Order Number 可先检查会释放哪些 Product No 和数量，再输入维护密码确认执行。",
+    "修复动作只把错误 active reservation 改为 released，不删除临时出库流水、不删除 Stock List 校准记录，Product No 详情仍保留历史。",
+    "Order Number 匹配同时支持业务订单号、REQ 号、内部 DO 号和订单名称，适合处理 PC 本地已发生的数据问题。"
   ]
 }
