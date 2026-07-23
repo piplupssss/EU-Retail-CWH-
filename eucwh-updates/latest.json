@@ -1,14 +1,13 @@
 {
-  "latest_version": "VN148",
-  "release_time": "2026-07-23 10:21 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN148/VN148_update.zip",
-  "sha256": "b55b4c207deb27c0f2183fc2f6a63357f4300024ed5f694951c56b4c1d3069c8",
+  "latest_version": "VN149",
+  "release_time": "2026-07-23 12:06 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN149/VN149_update.zip",
+  "sha256": "080056ed69a3aac6a3d228fa9f59e4c6430c57ee76ad7475a9e04a251f039aca",
   "notes": [
-    "修复价格与备注一次性校准后的图片备注展示：库存清单、物料选择、需求明细和订单履约中的图片现在优先使用 Product Master 备注；点击放大图片底部显示“备注：具体内容”，不再显示与业务无关的“单击背景关闭”。",
-    "需求 Todo 搜索栏新增备注搜索能力：除 Order Number、STT/Booking、Product No、BOM 和描述外，现在也会搜索需求备注、需求明细备注和 Product Master 备注。",
-    "库存风险新增“缺备注”卡片，并支持点击下钻到库存清单的“仅看缺备注 SKU”；缺备注口径为主数据备注和库存行备注都为空，避免把仍有供应商备注的 SKU 误判为缺备注。",
-    "DOS 超期和长期未使用明细中的 Product No 支持点击打开 SKU 详情，方便直接查看库存、图片、备注和近期出入库流水。",
-    "临时入库日期现在参与库龄和 DOS 计算；临时出库/库存占用日期现在参与最后出库时间和未使用时间计算，并在库存清单及 SKU 详情中显示临时标识，等待月度正式流水最终校准。",
-    "本次更新不修改 PC 本地库存数量、订单、物流、发票、图片、正式月度流水或供应商 Stock List 原始值；只修正备注展示、搜索、风险统计和临时日期参与分析的程序逻辑。"
+    "出库管理中的“合并国家通知 PDF”按钮改为“通知 PDF”，点击后先选择“每单生成一个单独 PDF”或“所有单整合生成一个 PDF”。",
+    "每单单独生成模式会按每票通知分别打开打印窗口；合并模式会把所有选中通知分页整合到一个 PDF 里，方便一次性归档或发送。",
+    "优化通知 PDF 的默认保存标题：单一国家正式物流通知使用类似“Shipment Notification RO July 23”的格式；STT 前核对通知使用“Shipment Details Confirmation 国家 日期”的格式，多国家合并使用 Multiple Countries。",
+    "批量生成通知 PDF 时改为读取系统已缓存的物流信息，不再逐票自动刷新 DSV tracking，减少生成和保存前等待时间；如需最新物流状态，可先在物流清单执行批量核实。",
+    "本次更新不修改订单、库存、物流、发票、图片、模板或任何 PC 本地业务数据；只调整通知 PDF 的入口、输出模式、打印标题和批量生成前端逻辑。"
   ]
 }
