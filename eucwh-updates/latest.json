@@ -1,13 +1,14 @@
 {
-  "latest_version": "VN149",
-  "release_time": "2026-07-23 12:06 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN149/VN149_update.zip",
-  "sha256": "080056ed69a3aac6a3d228fa9f59e4c6430c57ee76ad7475a9e04a251f039aca",
+  "latest_version": "VN150",
+  "release_time": "2026-07-23 14:28 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN150/VN150_update.zip",
+  "sha256": "c1ba22c6f5fafccecd783c98cf3670012ee4572c883216b783789fa190a77419",
   "notes": [
-    "出库管理中的“合并国家通知 PDF”按钮改为“通知 PDF”，点击后先选择“每单生成一个单独 PDF”或“所有单整合生成一个 PDF”。",
-    "每单单独生成模式会按每票通知分别打开打印窗口；合并模式会把所有选中通知分页整合到一个 PDF 里，方便一次性归档或发送。",
-    "优化通知 PDF 的默认保存标题：单一国家正式物流通知使用类似“Shipment Notification RO July 23”的格式；STT 前核对通知使用“Shipment Details Confirmation 国家 日期”的格式，多国家合并使用 Multiple Countries。",
-    "批量生成通知 PDF 时改为读取系统已缓存的物流信息，不再逐票自动刷新 DSV tracking，减少生成和保存前等待时间；如需最新物流状态，可先在物流清单执行批量核实。",
-    "本次更新不修改订单、库存、物流、发票、图片、模板或任何 PC 本地业务数据；只调整通知 PDF 的入口、输出模式、打印标题和批量生成前端逻辑。"
+    "修复物流清单“强制重扫”的范围：现在必须先勾选运单，点击后只重新扫描当前勾选的订单，不再扫描全部未闭环运单，避免几百票被误触全量重扫。",
+    "后端同步增加保护：旧前端或异常请求即使发送 force_all，没有勾选订单也会直接拒绝，不会启动全量重扫任务。",
+    "物流“未闭环”口径明确为没有实际交付时间 actual_delivery_date 的运单；该判断与发票验收状态无关，不再把验收闭环误当作物流闭环。",
+    "普通“批量核实”继续保持智能增量策略：优先扫描最近 14 天、异常、运输中、到 ETA 或无 ETA，以及用户勾选的运单；已经有实际交付时间的运单默认跳过。",
+    "通知 PDF 下载改为统一认证下载通道，避免登录状态下批量 PDF/ZIP 下载被认证拦截。",
+    "本次更新不修改库存数量、库存流水、订单、发票验收、图片、模板或 PC 本地业务数据；只修正物流核实按钮范围、后端保护、闭环判断口径和通知 PDF 下载通道。"
   ]
 }
