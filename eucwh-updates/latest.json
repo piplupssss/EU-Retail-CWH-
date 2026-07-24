@@ -1,14 +1,12 @@
 {
-  "latest_version": "VN150",
-  "release_time": "2026-07-23 14:28 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN150/VN150_update.zip",
-  "sha256": "c1ba22c6f5fafccecd783c98cf3670012ee4572c883216b783789fa190a77419",
+  "latest_version": "VN151",
+  "release_time": "2026-07-24 14:05 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN151/VN151_update.zip",
+  "sha256": "859022daab68fb35f4b2e668fefffb38525147f06da3394a29b09ca4aa6dbb95",
   "notes": [
-    "修复物流清单“强制重扫”的范围：现在必须先勾选运单，点击后只重新扫描当前勾选的订单，不再扫描全部未闭环运单，避免几百票被误触全量重扫。",
-    "后端同步增加保护：旧前端或异常请求即使发送 force_all，没有勾选订单也会直接拒绝，不会启动全量重扫任务。",
-    "物流“未闭环”口径明确为没有实际交付时间 actual_delivery_date 的运单；该判断与发票验收状态无关，不再把验收闭环误当作物流闭环。",
-    "普通“批量核实”继续保持智能增量策略：优先扫描最近 14 天、异常、运输中、到 ETA 或无 ETA，以及用户勾选的运单；已经有实际交付时间的运单默认跳过。",
-    "通知 PDF 下载改为统一认证下载通道，避免登录状态下批量 PDF/ZIP 下载被认证拦截。",
-    "本次更新不修改库存数量、库存流水、订单、发票验收、图片、模板或 PC 本地业务数据；只修正物流核实按钮范围、后端保护、闭环判断口径和通知 PDF 下载通道。"
+    "修复 PC 点击下载合并通知 PDF 时出现 No module named reportlab 的问题：后端 PDF 生成现在带有标准库兜底路径，PC 没有 reportlab 也能生成并下载合并 PDF。",
+    "多个独立通知 PDF 打包 ZIP 同样支持 reportlab 缺失兜底，不再因为缺少第三方库导致 500 错误。",
+    "如果运行环境已经有 reportlab，系统继续使用原来的富版 PDF 生成；缺少 reportlab 时自动切换到轻量 PDF，保留订单号、国家、STT、ETA、地址、收件人、重量体积、SKU、数量和金额等核心通知信息。",
+    "本次更新不修改库存数量、库存流水、订单、物流状态、发票验收、图片、模板或 PC 本地业务数据；只修复通知 PDF 下载生成的运行时依赖问题。"
   ]
 }
