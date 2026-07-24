@@ -1,13 +1,13 @@
 {
-  "latest_version": "VN159",
-  "release_time": "2026-07-24 16:17 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN159/VN159_update.zip",
-  "sha256": "293145f57f16836eb0ff3e22a96acffd1c2b52b44de9f3ba3adcbf0f33331895",
+  "latest_version": "VN160",
+  "release_time": "2026-07-24 17:01 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN160/VN160_update.zip",
+  "sha256": "3edf36be6c4c231346f89ae9e128893d74993b4f8de79b7103338a4eb062c95b",
   "notes": [
-    "库存风险下钻到“仅看缺备注 SKU”后，库存清单左侧临时显示多选列，右上角显示“批量修改备注”功能键；普通库存清单不显示该入口。",
-    "批量备注弹窗支持对已勾选 SKU 写入同一备注，提交后刷新库存清单和库存看板，便于连续补全缺备注数据。",
-    "批量写入接口只更新所选 Product No 的 product_master.remark，不按 BOM 合并，不修改库存、图片、单价、出入流水、物流、订单或发票数据。",
-    "批量备注写入前会自动备份 WMS 数据库；不支持批量清空备注，清空仍需逐个 SKU 维护确认。",
-    "已验证缺备注筛选接口返回内部 product_key、批量接口校验、Python/JS 语法和当前 5001 运行服务；本次更新不包含数据库、图片、上传文件或本地模板。"
+    "修复同一 BOM Code 下多个 Product No 时，打开 SKU 维护页可能把兄弟 SKU 的归属国家带入当前 SKU 的问题；维护弹窗现在只读取当前 Product No 的库存行。",
+    "修复 Product Detail 重新打开或加载失败时可能复用上一个 SKU 详情状态的问题；打开新 Product No 会先清空旧详情引用。",
+    "产品详情库存行排序改为当前 Product No 优先，再显示同 BOM 关联 Product No，减少关联 SKU 对维护判断的干扰。",
+    "后端保存归属国家增加仓库维度防线：归属国家只能写入目标 Warehouse + Product No 库存行，缺少目标仓库时拒绝保存，避免按 Product No 批量写全仓。",
+    "已用同 BOM、同 Lodz、A=RHQ/B=PL 的临时测试数据验证，打开 B 时优先返回并维护 B=PL；本次更新不包含数据库、图片、上传文件或本地模板。"
   ]
 }
