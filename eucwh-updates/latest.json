@@ -1,13 +1,13 @@
 {
-  "latest_version": "VN158",
-  "release_time": "2026-07-24 15:46 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN158/VN158_update.zip",
-  "sha256": "db4b68003ea137cc30764c8b536f985b753de19e258bf4c62e98afece175a141",
+  "latest_version": "VN159",
+  "release_time": "2026-07-24 16:17 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN159/VN159_update.zip",
+  "sha256": "293145f57f16836eb0ff3e22a96acffd1c2b52b44de9f3ba3adcbf0f33331895",
   "notes": [
-    "修复后端直接下载的 Shipment Notification / Shipment Details Confirmation PDF 中 STT / Booking 不能点击跳转的问题；下载出的 PDF 现在保留可点击 DSV/myDSV tracking 链接。",
-    "统一前端通知和后端 PDF 的 STT 链接地址，避免前端预览与后端下载指向不同承运商页面。",
-    "修正 STT 前确认通知中 Pending warehouse feedback 重复显示的问题：STT / Booking 标题下不再重复显示，只保留高亮状态提示。",
-    "通知 PDF Photo 列调整为 60px，图片保持 56px 并左右各留 2px；Product No、Description、Qty 等表头继续居中，避免图片贴边和 Qty 表头偏右。",
-    "已验证正式发货通知、STT 前确认通知、后端下载 PDF 链接对象、语法检查和通知 PDF 生成；本次更新不修改库存、订单、物流状态、发票、图片、模板或 PC 本地业务数据。"
+    "库存风险下钻到“仅看缺备注 SKU”后，库存清单左侧临时显示多选列，右上角显示“批量修改备注”功能键；普通库存清单不显示该入口。",
+    "批量备注弹窗支持对已勾选 SKU 写入同一备注，提交后刷新库存清单和库存看板，便于连续补全缺备注数据。",
+    "批量写入接口只更新所选 Product No 的 product_master.remark，不按 BOM 合并，不修改库存、图片、单价、出入流水、物流、订单或发票数据。",
+    "批量备注写入前会自动备份 WMS 数据库；不支持批量清空备注，清空仍需逐个 SKU 维护确认。",
+    "已验证缺备注筛选接口返回内部 product_key、批量接口校验、Python/JS 语法和当前 5001 运行服务；本次更新不包含数据库、图片、上传文件或本地模板。"
   ]
 }
