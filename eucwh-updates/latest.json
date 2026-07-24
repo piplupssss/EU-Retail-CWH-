@@ -1,13 +1,14 @@
 {
-  "latest_version": "VN156",
-  "release_time": "2026-07-24 15:02 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN156/VN156_update.zip",
-  "sha256": "9188db360b33be854dd44fb3f95276e189e367e200b2692aff8cdbab0d0dc7bf",
+  "latest_version": "VN157",
+  "release_time": "2026-07-24 15:24 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN157/VN157_update.zip",
+  "sha256": "f59b2986c55fcaac3252ccbcb0e90ffbbae5a35a86d3ea6e7c277e87cd7931cc",
   "notes": [
-    "修正 VN155 通知 PDF 语言方向：通知 PDF 改为英文单语，不再输出中文字段。",
-    "正式发货通知和 STT 前物料核对通知都已验证：标题、字段、STT/Pending 状态、SKU 表格和 footer 均按英文输出。",
-    "通知 PDF 的系统生成说明、联系人邮箱 qitenglu@h-partner.com 和反馈建议提示固定显示在页面最底部，不再跟在表格后面或被挤到空白第二页。",
-    "继续保留后端自动下载能力：合并模式直接下载一个 PDF；每单单独模式自动打包 ZIP，不需要浏览器逐张另存为。",
-    "继续取消通知 PDF 中的单价、总价和金额合计，只保留 Line、Photo、Product No、Description 和 Qty；本次更新不修改库存、订单、物流、发票、图片、模板或 PC 本地业务数据。"
+    "点击单票“生成物流通知”或“生成国家核对通知”后直接生成并下载 PDF，不再打开通知预览弹窗，也不再跳转。",
+    "批量通知 PDF 保留两个必要选择：“每单生成一个单独 PDF”和“所有单整合生成一个 PDF”；点击任一选项后立即生成下载，前者下载 ZIP，后者下载合并 PDF。",
+    "单票下载新增 delivery_order_ids 过滤，点击某个 Order Number / 子订单详情里的生成按钮时，只生成当前这一个订单对应的通知，不会误带同一需求下其它 STT。",
+    "修正通知 PDF 表格视觉：Photo 列保持 58px，不额外加宽；图片本身 56px，单独压缩 Photo 单元格 padding 并移除图片自身边框，避免图片超出格子或出现嵌套边框感。",
+    "Product No、Description、Qty 等通知表头统一居中；PDF 表格宽度调整为 calc(100% - 1px)，避免右侧边框在 PDF 渲染时差一点点被裁掉。",
+    "已验证正式发货通知、STT 前核对通知、批量合并 PDF、批量单独 ZIP 均可后端直接下载；本次更新不修改库存、订单、物流、发票、图片、模板或 PC 本地业务数据。"
   ]
 }
