@@ -1,13 +1,13 @@
 {
-  "latest_version": "VN155",
-  "release_time": "2026-07-24 14:57 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN155/VN155_update.zip",
-  "sha256": "2f397dedf44cf25504fa0f37fc3a2f41ae9d4f05f7fae33cf52dfc20b9934db7",
+  "latest_version": "VN156",
+  "release_time": "2026-07-24 15:02 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN156/VN156_update.zip",
+  "sha256": "9188db360b33be854dd44fb3f95276e189e367e200b2692aff8cdbab0d0dc7bf",
   "notes": [
-    "通知 PDF 改为后端使用浏览器渲染引擎生成，恢复接近前端预览/浏览器打印的视觉效果，同时保留一键下载合并 PDF 或 ZIP 包，不需要逐张另存为。",
-    "通知 PDF 文案改为中文单语，不再输出中英双语字段，减少版面噪音。",
-    "通知 PDF 物料表取消单价、总价和金额合计，只保留行号、图片、Product No、物料描述和数量，避免对国家通知暴露不必要价格信息。",
-    "修复后端 headless 浏览器生成 PDF 后进程不退出导致长时间等待的问题：现在检测到 PDF 文件稳定生成后主动结束渲染进程并立即返回下载。",
-    "保留底部 Qiteng Liu 与反馈邮箱 qitenglu@h-partner.com；本次更新不修改库存数量、库存流水、订单、物流状态、发票验收、图片、模板或 PC 本地业务数据。"
+    "修正 VN155 通知 PDF 语言方向：通知 PDF 改为英文单语，不再输出中文字段。",
+    "正式发货通知和 STT 前物料核对通知都已验证：标题、字段、STT/Pending 状态、SKU 表格和 footer 均按英文输出。",
+    "通知 PDF 的系统生成说明、联系人邮箱 qitenglu@h-partner.com 和反馈建议提示固定显示在页面最底部，不再跟在表格后面或被挤到空白第二页。",
+    "继续保留后端自动下载能力：合并模式直接下载一个 PDF；每单单独模式自动打包 ZIP，不需要浏览器逐张另存为。",
+    "继续取消通知 PDF 中的单价、总价和金额合计，只保留 Line、Photo、Product No、Description 和 Qty；本次更新不修改库存、订单、物流、发票、图片、模板或 PC 本地业务数据。"
   ]
 }
