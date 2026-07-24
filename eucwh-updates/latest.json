@@ -1,8 +1,8 @@
 {
-  "latest_version": "VN152",
-  "release_time": "2026-07-24 14:08 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN152/VN152_update.zip",
-  "sha256": "57f44e58db6c39ef03670471a687713ee2ebb20398551ebdfa2711121d396cd1",
+  "latest_version": "VN153",
+  "release_time": "2026-07-24 14:14 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN153/VN153_update.zip",
+  "sha256": "5adabafc99b7c2588bc6247055301ea428c3a54c8f643dd102cb949abb059055",
   "notes": [
     "修复 PC 点击下载合并通知 PDF 时出现 No module named reportlab 的问题：后端 PDF 生成现在带有标准库兜底路径，PC 没有 reportlab 也能生成并下载合并 PDF。",
     "多个独立通知 PDF 打包 ZIP 同样支持 reportlab 缺失兜底，不再因为缺少第三方库导致 500 错误。",
