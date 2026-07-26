@@ -1,13 +1,12 @@
 {
-  "latest_version": "VN162",
-  "release_time": "2026-07-26 20:53 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN162/VN162_update.zip",
-  "sha256": "4f7d2e7b36dcd847258c5a2b1544ec4b36c013894f34655cd1cd45ed34169b04",
+  "latest_version": "VN163",
+  "release_time": "2026-07-26 22:42 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN163/VN163_update.zip",
+  "sha256": "fffc788e48fb5d84504c334104d078a30f541b1d066a0043fd7f5a38b61db0ff",
   "notes": [
-    "修复物流看板“各国要货量分布”中费用只显示波兰的问题：国家费用不再读取物流表 price_without_vat，改为读取已匹配 STT/Booking 的物流发票明细。",
-    "国家费用按 invoice_items.accepted_amount 统计；未填写验收金额时回退到 net_amount，并通过 matched_booking_id 关联回物流单后按需求国家归因。",
-    "费用指标和图表单位统一为 PLN；数量、重量、地图、平均交付时长和国家点击下钻逻辑保持不变。",
-    "库存清单和库存看板的库存更新时间统一只显示年月日，隐藏具体时分秒。",
-    "已验证年度国家费用接口 19 个国家均有非零费用、物流看板费用图显示 PLN、库存更新时间不再显示时分、Python/JS 语法检查和本地 5001 运行；本次更新不包含数据库、图片、上传文件或本地模板。"
+    "修复手工维护的 SKU 备注在库存 Excel 导出中缺失的问题：导出备注优先读取 product_master.remark，为空时再回退到库存行 comment。",
+    "修复 shipment notification 中已交付订单仍显示 “Your shipment is in transit” 的问题：通知预览和后端直接下载 PDF 现在复用系统物流状态，已交付显示 delivered 文案，异常单显示 requires attention 文案。",
+    "调整物流清单缩略/详细列：缩略模式隐藏验收状态并显示重量/体积；详细模式恢复显示验收状态，筛选和排序逻辑保持不变。",
+    "已验证库存备注导出兜底、已交付通知 PDF 文本、物流清单缩略/详细切换、Python/JS 语法检查和本地 5001 页面；本次更新不包含数据库、图片、上传文件或本地模板。"
   ]
 }
