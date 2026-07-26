@@ -1,13 +1,12 @@
 {
-  "latest_version": "VN160",
-  "release_time": "2026-07-24 17:01 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN160/VN160_update.zip",
-  "sha256": "3edf36be6c4c231346f89ae9e128893d74993b4f8de79b7103338a4eb062c95b",
+  "latest_version": "VN161",
+  "release_time": "2026-07-26 20:25 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN161/VN161_update.zip",
+  "sha256": "a583d71198442e1c08c806133237270a9c29f5f04f97d7bea67324cc85adf3c1",
   "notes": [
-    "修复同一 BOM Code 下多个 Product No 时，打开 SKU 维护页可能把兄弟 SKU 的归属国家带入当前 SKU 的问题；维护弹窗现在只读取当前 Product No 的库存行。",
-    "修复 Product Detail 重新打开或加载失败时可能复用上一个 SKU 详情状态的问题；打开新 Product No 会先清空旧详情引用。",
-    "产品详情库存行排序改为当前 Product No 优先，再显示同 BOM 关联 Product No，减少关联 SKU 对维护判断的干扰。",
-    "后端保存归属国家增加仓库维度防线：归属国家只能写入目标 Warehouse + Product No 库存行，缺少目标仓库时拒绝保存，避免按 Product No 批量写全仓。",
-    "已用同 BOM、同 Lodz、A=RHQ/B=PL 的临时测试数据验证，打开 B 时优先返回并维护 B=PL；本次更新不包含数据库、图片、上传文件或本地模板。"
+    "入库管理的到货登记/编辑弹窗去掉顶部备注模块，减少到货登记时的非必要填写项。",
+    "“+ 添加空白物料”移动到“到货物料”标题右侧，与“从库存选择”并列，新增物料入口不再沉到底部。",
+    "前端保存到货登记时不再提交已删除的备注字段；后端编辑旧记录时保留历史备注，不会因为本次界面简化把旧备注清空。",
+    "已验证到货弹窗静态结构、前端脚本语法、后端路由语法和本地 5001 页面可访问；本次更新不包含数据库、图片、上传文件或本地模板。"
   ]
 }
