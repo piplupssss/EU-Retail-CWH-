@@ -1,12 +1,13 @@
 {
-  "latest_version": "VN161",
-  "release_time": "2026-07-26 20:25 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN161/VN161_update.zip",
-  "sha256": "a583d71198442e1c08c806133237270a9c29f5f04f97d7bea67324cc85adf3c1",
+  "latest_version": "VN162",
+  "release_time": "2026-07-26 20:53 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN162/VN162_update.zip",
+  "sha256": "4f7d2e7b36dcd847258c5a2b1544ec4b36c013894f34655cd1cd45ed34169b04",
   "notes": [
-    "入库管理的到货登记/编辑弹窗去掉顶部备注模块，减少到货登记时的非必要填写项。",
-    "“+ 添加空白物料”移动到“到货物料”标题右侧，与“从库存选择”并列，新增物料入口不再沉到底部。",
-    "前端保存到货登记时不再提交已删除的备注字段；后端编辑旧记录时保留历史备注，不会因为本次界面简化把旧备注清空。",
-    "已验证到货弹窗静态结构、前端脚本语法、后端路由语法和本地 5001 页面可访问；本次更新不包含数据库、图片、上传文件或本地模板。"
+    "修复物流看板“各国要货量分布”中费用只显示波兰的问题：国家费用不再读取物流表 price_without_vat，改为读取已匹配 STT/Booking 的物流发票明细。",
+    "国家费用按 invoice_items.accepted_amount 统计；未填写验收金额时回退到 net_amount，并通过 matched_booking_id 关联回物流单后按需求国家归因。",
+    "费用指标和图表单位统一为 PLN；数量、重量、地图、平均交付时长和国家点击下钻逻辑保持不变。",
+    "库存清单和库存看板的库存更新时间统一只显示年月日，隐藏具体时分秒。",
+    "已验证年度国家费用接口 19 个国家均有非零费用、物流看板费用图显示 PLN、库存更新时间不再显示时分、Python/JS 语法检查和本地 5001 运行；本次更新不包含数据库、图片、上传文件或本地模板。"
   ]
 }
