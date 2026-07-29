@@ -1,12 +1,13 @@
 {
-  "latest_version": "VN163",
-  "release_time": "2026-07-26 22:42 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN163/VN163_update.zip",
-  "sha256": "fffc788e48fb5d84504c334104d078a30f541b1d066a0043fd7f5a38b61db0ff",
+  "latest_version": "VN164",
+  "release_time": "2026-07-29 10:26 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN164/VN164_update.zip",
+  "sha256": "08a35e3d0abfa1311c7da6557b3bab536027f028b5b09c49ae9e43f7bc1da352",
   "notes": [
-    "修复手工维护的 SKU 备注在库存 Excel 导出中缺失的问题：导出备注优先读取 product_master.remark，为空时再回退到库存行 comment。",
-    "修复 shipment notification 中已交付订单仍显示 “Your shipment is in transit” 的问题：通知预览和后端直接下载 PDF 现在复用系统物流状态，已交付显示 delivered 文案，异常单显示 requires attention 文案。",
-    "调整物流清单缩略/详细列：缩略模式隐藏验收状态并显示重量/体积；详细模式恢复显示验收状态，筛选和排序逻辑保持不变。",
-    "已验证库存备注导出兜底、已交付通知 PDF 文本、物流清单缩略/详细切换、Python/JS 语法检查和本地 5001 页面；本次更新不包含数据库、图片、上传文件或本地模板。"
+    "库存清单默认恢复为当前有库存 SKU；新增“包含零库存历史”勾选项，需要查询库存为 0 但仍保留主数据、图片、备注和流水历史的 SKU 时再打开。",
+    "库存规模统计同步当前筛选和“包含零库存历史”范围；清除筛选会自动关闭零库存历史范围，缺价格、缺图片、缺入库时间、缺备注等风险筛选仍只看当前有库存 SKU。",
+    "修复全部库存清单 PDF/打印时图片较多导致后半部分图片未加载完成的问题：报告打印前会等待报告区图片加载/解码完成，超时或失败时给出加载数量提示后再继续。",
+    "需求 Todo 列表中“已取消”状态改为红色标识，和取消/异常类状态的业务含义一致。",
+    "已验证库存历史开关、已取消标红、库存 PDF 图片等待逻辑、Python/JS 语法检查和本地 5001 页面；本次更新不包含数据库、图片、上传文件或本地模板。"
   ]
 }
