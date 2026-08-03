@@ -1,13 +1,14 @@
 {
-  "latest_version": "VN164",
-  "release_time": "2026-07-29 10:26 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN164/VN164_update.zip",
-  "sha256": "08a35e3d0abfa1311c7da6557b3bab536027f028b5b09c49ae9e43f7bc1da352",
+  "latest_version": "VN165",
+  "release_time": "2026-08-03 14:32 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN165/VN165_update.zip",
+  "sha256": "e8bd75c066bd5d2b0c6bfbc848efa6e55b6d558ca4b3d2b121ad28f746e769e9",
   "notes": [
-    "库存清单默认恢复为当前有库存 SKU；新增“包含零库存历史”勾选项，需要查询库存为 0 但仍保留主数据、图片、备注和流水历史的 SKU 时再打开。",
-    "库存规模统计同步当前筛选和“包含零库存历史”范围；清除筛选会自动关闭零库存历史范围，缺价格、缺图片、缺入库时间、缺备注等风险筛选仍只看当前有库存 SKU。",
-    "修复全部库存清单 PDF/打印时图片较多导致后半部分图片未加载完成的问题：报告打印前会等待报告区图片加载/解码完成，超时或失败时给出加载数量提示后再继续。",
-    "需求 Todo 列表中“已取消”状态改为红色标识，和取消/异常类状态的业务含义一致。",
-    "已验证库存历史开关、已取消标红、库存 PDF 图片等待逻辑、Python/JS 语法检查和本地 5001 页面；本次更新不包含数据库、图片、上传文件或本地模板。"
+    "修复月度 Specyfikacja 流水导入后，同一个 ID_OPERACJI / Order Number 下正式出库与临时出库同时显示的问题。",
+    "月度出库现在优先按 ID_OPERACJI(Order Number) + Product No 精确校准临时出库；匹配成功后临时 pending 行关闭为 reconciled，并释放/标记对应库存占用 reservation。",
+    "保留 Product No + 数量的兜底校准，但只用于没有 ID_OPERACJI 的月度流水，避免同一正式出库数量被重复使用。",
+    "新增一次性启动迁移，PC 升级后会自动修复已经导入过月度流水但仍残留的同 Order Number + Product No 临时出库；不改正式流水、不改库存数量、不删除历史记录。",
+    "修复库存清单、Product No 详情和库存统计中的临时最后出库时间判断：已被 Formal Specyfikacja 吸收的 released reservation 不再触发“临时 / 待月度流水校准”。",
+    "已验证库存历史契约、工程门禁和本地数据库副本迁移；本次更新不包含数据库、图片、上传文件或本地模板。"
   ]
 }
