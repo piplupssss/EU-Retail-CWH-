@@ -1,14 +1,12 @@
 {
-  "latest_version": "VN165",
-  "release_time": "2026-08-03 14:32 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN165/VN165_update.zip",
-  "sha256": "e8bd75c066bd5d2b0c6bfbc848efa6e55b6d558ca4b3d2b121ad28f746e769e9",
+  "latest_version": "VN166",
+  "release_time": "2026-08-05 10:28 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN166/VN166_update.zip",
+  "sha256": "8550bb56523f60ab544263244e73151f7af8eb5e2d22d1acf5e1d36a8bb57182",
   "notes": [
-    "修复月度 Specyfikacja 流水导入后，同一个 ID_OPERACJI / Order Number 下正式出库与临时出库同时显示的问题。",
-    "月度出库现在优先按 ID_OPERACJI(Order Number) + Product No 精确校准临时出库；匹配成功后临时 pending 行关闭为 reconciled，并释放/标记对应库存占用 reservation。",
-    "保留 Product No + 数量的兜底校准，但只用于没有 ID_OPERACJI 的月度流水，避免同一正式出库数量被重复使用。",
-    "新增一次性启动迁移，PC 升级后会自动修复已经导入过月度流水但仍残留的同 Order Number + Product No 临时出库；不改正式流水、不改库存数量、不删除历史记录。",
-    "修复库存清单、Product No 详情和库存统计中的临时最后出库时间判断：已被 Formal Specyfikacja 吸收的 released reservation 不再触发“临时 / 待月度流水校准”。",
-    "已验证库存历史契约、工程门禁和本地数据库副本迁移；本次更新不包含数据库、图片、上传文件或本地模板。"
+    "修复出库管理需求 Todo 中，已完成/已交付需求单不能勾选的问题；已交付后仍可选择并生成国家交付/物流通知 PDF。",
+    "需求 Todo 复选框禁用规则调整为：未匹配物料和已取消不可勾选；已完成/已交付不再被禁用，符合交付后继续通知国家的业务场景。",
+    "新增 fulfillment UI 防回归契约检查，禁止以后再次把 completed 状态加入通知 PDF 选择禁用条件。",
+    "已验证出库管理页面加载、未匹配和已取消仍禁用、JavaScript 语法、fulfillment UI contract 和完整工程门禁；本次更新不包含数据库、图片、上传文件或本地模板。"
   ]
 }
