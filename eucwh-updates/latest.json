@@ -1,12 +1,13 @@
 {
-  "latest_version": "VN166",
-  "release_time": "2026-08-05 10:28 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN166/VN166_update.zip",
-  "sha256": "8550bb56523f60ab544263244e73151f7af8eb5e2d22d1acf5e1d36a8bb57182",
+  "latest_version": "VN167",
+  "release_time": "2026-08-06 14:46 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN167/VN167_update.zip",
+  "sha256": "2953424ba5b648bb8b746d7c5b5e7e44433e34378f24ffdc04d858a59656e4f5",
   "notes": [
-    "修复出库管理需求 Todo 中，已完成/已交付需求单不能勾选的问题；已交付后仍可选择并生成国家交付/物流通知 PDF。",
-    "需求 Todo 复选框禁用规则调整为：未匹配物料和已取消不可勾选；已完成/已交付不再被禁用，符合交付后继续通知国家的业务场景。",
-    "新增 fulfillment UI 防回归契约检查，禁止以后再次把 completed 状态加入通知 PDF 选择禁用条件。",
-    "已验证出库管理页面加载、未匹配和已取消仍禁用、JavaScript 语法、fulfillment UI contract 和完整工程门禁；本次更新不包含数据库、图片、上传文件或本地模板。"
+    "修复月度 Specyfikacja 正式出库与临时出库看起来同一个 ID_OPERACJI / Order Number、但因 Excel 单元格换行或空白字符差异没有被校准的问题。",
+    "正式流水和临时出库现在统一按规范化后的 ID_OPERACJI(Order Number) + Product No 匹配，忽略空格、换行、Tab、下划线和横线差异。",
+    "新增 20260806 一次性启动迁移，PC 升级后会重新扫描已经导入过的正式月度流水，自动关闭匹配成功的 stock_reconciled/open 临时出库；不改正式流水、不改库存数量、不删除历史记录。",
+    "保留部分校准逻辑：如果月度正式出库数量小于临时出库数量，只校准已正式发生的数量，剩余临时出库继续保留等待后续月度流水。",
+    "已验证库存历史契约覆盖 EU_Hungary office_15072026 / Excel 换行 ID 场景、完整工程门禁和更新包边界；本次更新不包含数据库、图片、上传文件或本地模板。"
   ]
 }
