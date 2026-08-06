@@ -1,13 +1,13 @@
 {
-  "latest_version": "VN167",
-  "release_time": "2026-08-06 14:46 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN167/VN167_update.zip",
-  "sha256": "2953424ba5b648bb8b746d7c5b5e7e44433e34378f24ffdc04d858a59656e4f5",
+  "latest_version": "VN168",
+  "release_time": "2026-08-06 15:00 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN168/VN168_update.zip",
+  "sha256": "93a29cfa6595911a91f1ccd4b2dd6b8394f8e4a386e4adc74162129218182a82",
   "notes": [
-    "修复月度 Specyfikacja 正式出库与临时出库看起来同一个 ID_OPERACJI / Order Number、但因 Excel 单元格换行或空白字符差异没有被校准的问题。",
-    "正式流水和临时出库现在统一按规范化后的 ID_OPERACJI(Order Number) + Product No 匹配，忽略空格、换行、Tab、下划线和横线差异。",
-    "新增 20260806 一次性启动迁移，PC 升级后会重新扫描已经导入过的正式月度流水，自动关闭匹配成功的 stock_reconciled/open 临时出库；不改正式流水、不改库存数量、不删除历史记录。",
-    "保留部分校准逻辑：如果月度正式出库数量小于临时出库数量，只校准已正式发生的数量，剩余临时出库继续保留等待后续月度流水。",
-    "已验证库存历史契约覆盖 EU_Hungary office_15072026 / Excel 换行 ID 场景、完整工程门禁和更新包边界；本次更新不包含数据库、图片、上传文件或本地模板。"
+    "修复 VN167 后仍可能显示同一 ID_OPERACJI / Product No 的正式出库和临时出库两行的问题；原因是历史 PC 数据可能已经记录旧迁移已执行，且部分 Excel ID 含 NBSP、点号等格式字符，旧匹配覆盖不足。",
+    "ID_OPERACJI / Order Number 校准升级为只保留 A-Z/0-9 的强规范化匹配，覆盖空格、换行、Tab、NBSP、下划线、横线、斜杠和点号等格式差异。",
+    "新增 VN168 一次性迁移键，PC 升级后会再次扫描已导入的正式月度流水，关闭被正式流水完全覆盖的 stock_reconciled/open 临时出库，并补充 released reservation 的正式流水吸收备注。",
+    "近期出入流水展示层增加兜底：如果正式月度出库已经按 Order Number + Product No + 数量覆盖临时出库，即使历史修复未及时执行，也不再展示那条临时出库。",
+    "已验证 A0841059 同类场景、EU_Hungary office_15072026 的换行/NBSP/点号差异、库存历史契约和完整工程门禁；本次更新不包含数据库、图片、上传文件或本地模板。"
   ]
 }
