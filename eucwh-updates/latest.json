@@ -1,13 +1,13 @@
 {
-  "latest_version": "VN170",
-  "release_time": "2026-08-14 12:29 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN170/VN170_update.zip",
-  "sha256": "582b3bab077e00e9d72781e1fc3112b25e0e3315055bed627003b25462591e96",
+  "latest_version": "VN171",
+  "release_time": "2026-08-14 16:03 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN171/VN171_update.zip",
+  "sha256": "c20610e8e2747045ab50b62c6a91297985f738a556f0fd864b86c2bf9070ecba",
   "notes": [
-    "修复 SKU 手工维护和到货登记的 Category / Category 2 选项被全大写默认值污染的问题；下拉选项现在按供应商标准拼写忽略大小写去重，保存后不再把 Prop / Phone 写成 PROP / PHONE。",
-    "新增分类语义保护：系统里已经维护为 Prop / Phone 的 SKU，即使后续供应商 Stock List 仍回传旧分类 Dummy / Audio，也只刷新库存数量，不会把人工确认的分类含义改回去。",
-    "供应商 Stock List 继续作为分类名称大小写的标准来源；同一分类的 PROP / Prop 会统一为供应商拼写 Prop，但 IOT 等供应商正式全大写缩写保持不变，大小写校准不会跨分类改含义。",
-    "升级时保护当前系统已有 Category / Category 2 语义，并修复同义项已有的全大写污染；后续新增供应商 SKU 仍按供应商分类进入，人工维护后才转为系统保护。",
-    "完整备份新增分类保护标记与大小写字典，恢复后规则不丢失；已验证手工维护、供应商库存刷新、到货登记、库存清单、SKU 维护保存、备份恢复、浏览器交互和工程门禁，本次更新不包含数据库、图片、上传文件或本地模板。"
+    "物流监控整合到物流清单，取消独立监控台入口；进入物流清单默认显示在途监控，并可切换到全部物流台账。",
+    "在途监控改为紧凑表格，集中显示尚未实际交付运单的 STT、订单、国家、状态、最新变化、Pickup、ETA、重量体积及最后核实时间。",
+    "保留刷新全部在途、刷新已选和单票刷新；首次打开建立当前状态基线，只有后续真实变化才标记为新，异常、ETA 已到和待 Pickup 优先显示。",
+    "出库管理界面的“需求 Todo”统一改名为“出库清单/出库需求”，不改变需求登记、物料匹配、仓库下单、STT 回传和国家通知业务逻辑。",
+    "已增加物流监控界面契约并纳入工程门禁；本次更新不包含数据库、图片、上传文件、本地模板，也尚未接入新讨论的 Tracking API。"
   ]
 }
