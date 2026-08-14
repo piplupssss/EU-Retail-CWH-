@@ -1,13 +1,13 @@
 {
-  "latest_version": "VN168",
-  "release_time": "2026-08-06 15:00 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN168/VN168_update.zip",
-  "sha256": "93a29cfa6595911a91f1ccd4b2dd6b8394f8e4a386e4adc74162129218182a82",
+  "latest_version": "VN169",
+  "release_time": "2026-08-14 11:28 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN169/VN169_update.zip",
+  "sha256": "65d9bdcb7bb7915a701b52ea942110f857b13d18dd9eeb74140214e3dcfe2fe1",
   "notes": [
-    "修复 VN167 后仍可能显示同一 ID_OPERACJI / Product No 的正式出库和临时出库两行的问题；原因是历史 PC 数据可能已经记录旧迁移已执行，且部分 Excel ID 含 NBSP、点号等格式字符，旧匹配覆盖不足。",
-    "ID_OPERACJI / Order Number 校准升级为只保留 A-Z/0-9 的强规范化匹配，覆盖空格、换行、Tab、NBSP、下划线、横线、斜杠和点号等格式差异。",
-    "新增 VN168 一次性迁移键，PC 升级后会再次扫描已导入的正式月度流水，关闭被正式流水完全覆盖的 stock_reconciled/open 临时出库，并补充 released reservation 的正式流水吸收备注。",
-    "近期出入流水展示层增加兜底：如果正式月度出库已经按 Order Number + Product No + 数量覆盖临时出库，即使历史修复未及时执行，也不再展示那条临时出库。",
-    "已验证 A0841059 同类场景、EU_Hungary office_15072026 的换行/NBSP/点号差异、库存历史契约和完整工程门禁；本次更新不包含数据库、图片、上传文件或本地模板。"
+    "修复正式库存为 0、但存在未校准临时入库的 SKU 被误判为零库存历史的问题；此类物料现在默认显示在库存清单，并显示 0 正式库存、临时入库数量和实时可用库存。",
+    "修复上述 SKU 在需求 Todo 选择物料时必须精确搜索才能出现的问题；出库物料选择器、仓库筛选和库存统计现在统一识别临时入库可用量，并按规范化 Product No 关联不同大小写记录。",
+    "修复 Category 和 Category 2 在入库管理、SKU 维护及数据校准后被强制转成大写的问题；展示和保存保留供应商/人工录入的原始大小写，仅筛选匹配忽略大小写。",
+    "正式库存仍只由供应商 Stock List 校准，临时入库不会写入正式库存；零库存 SKU 的主数据、图片、备注和流水继续保留。",
+    "已验证临时入库 SKU 的库存清单、规模统计、需求物料选择、Category/Category 2 大小写、库存历史契约、完整操作流契约和工程门禁；本次更新不包含数据库、图片、上传文件或本地模板。"
   ]
 }
