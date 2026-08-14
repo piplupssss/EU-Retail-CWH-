@@ -1,13 +1,13 @@
 {
-  "latest_version": "VN169",
-  "release_time": "2026-08-14 11:28 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN169/VN169_update.zip",
-  "sha256": "65d9bdcb7bb7915a701b52ea942110f857b13d18dd9eeb74140214e3dcfe2fe1",
+  "latest_version": "VN170",
+  "release_time": "2026-08-14 12:29 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN170/VN170_update.zip",
+  "sha256": "582b3bab077e00e9d72781e1fc3112b25e0e3315055bed627003b25462591e96",
   "notes": [
-    "修复正式库存为 0、但存在未校准临时入库的 SKU 被误判为零库存历史的问题；此类物料现在默认显示在库存清单，并显示 0 正式库存、临时入库数量和实时可用库存。",
-    "修复上述 SKU 在需求 Todo 选择物料时必须精确搜索才能出现的问题；出库物料选择器、仓库筛选和库存统计现在统一识别临时入库可用量，并按规范化 Product No 关联不同大小写记录。",
-    "修复 Category 和 Category 2 在入库管理、SKU 维护及数据校准后被强制转成大写的问题；展示和保存保留供应商/人工录入的原始大小写，仅筛选匹配忽略大小写。",
-    "正式库存仍只由供应商 Stock List 校准，临时入库不会写入正式库存；零库存 SKU 的主数据、图片、备注和流水继续保留。",
-    "已验证临时入库 SKU 的库存清单、规模统计、需求物料选择、Category/Category 2 大小写、库存历史契约、完整操作流契约和工程门禁；本次更新不包含数据库、图片、上传文件或本地模板。"
+    "修复 SKU 手工维护和到货登记的 Category / Category 2 选项被全大写默认值污染的问题；下拉选项现在按供应商标准拼写忽略大小写去重，保存后不再把 Prop / Phone 写成 PROP / PHONE。",
+    "新增分类语义保护：系统里已经维护为 Prop / Phone 的 SKU，即使后续供应商 Stock List 仍回传旧分类 Dummy / Audio，也只刷新库存数量，不会把人工确认的分类含义改回去。",
+    "供应商 Stock List 继续作为分类名称大小写的标准来源；同一分类的 PROP / Prop 会统一为供应商拼写 Prop，但 IOT 等供应商正式全大写缩写保持不变，大小写校准不会跨分类改含义。",
+    "升级时保护当前系统已有 Category / Category 2 语义，并修复同义项已有的全大写污染；后续新增供应商 SKU 仍按供应商分类进入，人工维护后才转为系统保护。",
+    "完整备份新增分类保护标记与大小写字典，恢复后规则不丢失；已验证手工维护、供应商库存刷新、到货登记、库存清单、SKU 维护保存、备份恢复、浏览器交互和工程门禁，本次更新不包含数据库、图片、上传文件或本地模板。"
   ]
 }
