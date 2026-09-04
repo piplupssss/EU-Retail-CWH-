@@ -1,13 +1,12 @@
 {
-  "latest_version": "VN171",
-  "release_time": "2026-08-14 16:03 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN171/VN171_update.zip",
-  "sha256": "c20610e8e2747045ab50b62c6a91297985f738a556f0fd864b86c2bf9070ecba",
+  "latest_version": "VN172",
+  "release_time": "2026-09-04 15:16 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN172/VN172_update.zip",
+  "sha256": "e6574fb40b92651f08008d663d2cb4487e75430b7bbe56a2b94639af0ab659ca",
   "notes": [
-    "物流监控整合到物流清单，取消独立监控台入口；进入物流清单默认显示在途监控，并可切换到全部物流台账。",
-    "在途监控改为紧凑表格，集中显示尚未实际交付运单的 STT、订单、国家、状态、最新变化、Pickup、ETA、重量体积及最后核实时间。",
-    "保留刷新全部在途、刷新已选和单票刷新；首次打开建立当前状态基线，只有后续真实变化才标记为新，异常、ETA 已到和待 Pickup 优先显示。",
-    "出库管理界面的“需求 Todo”统一改名为“出库清单/出库需求”，不改变需求登记、物料匹配、仓库下单、STT 回传和国家通知业务逻辑。",
-    "已增加物流监控界面契约并纳入工程门禁；本次更新不包含数据库、图片、上传文件、本地模板，也尚未接入新讨论的 Tracking API。"
+    "仓库需求邮件中的 Req. Ship Date 统一使用短日期格式 d.mm.yyyy，例如 2026 年 9 月 4 日显示为 4.09.2026。",
+    "Lodz Packing List 附件中的 Req. Ship Date 继续写入真正的 Excel 日期单元格，并将数字格式统一为 d.mm.yyyy，不再以纯文本或 yyyy/m/d 显示。",
+    "邮件预览、复制邮件、系统邮件草稿和 Windows Outlook 草稿使用同一日期格式，避免正文与附件不一致。",
+    "Req. Ship Date 仍默认取下单日期后的下一个工作日；本次更新不改变业务日期含义，也不包含数据库、图片、上传文件或各电脑本地 Packing List 模板。"
   ]
 }
