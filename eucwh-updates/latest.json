@@ -1,12 +1,12 @@
 {
-  "latest_version": "VN172",
-  "release_time": "2026-09-04 15:16 CEST",
-  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN172/VN172_update.zip",
-  "sha256": "e6574fb40b92651f08008d663d2cb4487e75430b7bbe56a2b94639af0ab659ca",
+  "latest_version": "VN173",
+  "release_time": "2026-09-07 09:38 CEST",
+  "package_url": "https://github.com/piplupssss/EU-Retail-CWH-/releases/download/VN173/VN173_update.zip",
+  "sha256": "ab7660709b6d68656729dec05e60e77495d04f8a810d54ed747d103e2f48aef7",
   "notes": [
-    "仓库需求邮件中的 Req. Ship Date 统一使用短日期格式 d.mm.yyyy，例如 2026 年 9 月 4 日显示为 4.09.2026。",
-    "Lodz Packing List 附件中的 Req. Ship Date 继续写入真正的 Excel 日期单元格，并将数字格式统一为 d.mm.yyyy，不再以纯文本或 yyyy/m/d 显示。",
-    "邮件预览、复制邮件、系统邮件草稿和 Windows Outlook 草稿使用同一日期格式，避免正文与附件不一致。",
-    "Req. Ship Date 仍默认取下单日期后的下一个工作日；本次更新不改变业务日期含义，也不包含数据库、图片、上传文件或各电脑本地 Packing List 模板。"
+    "修正 VN172 的 Require Ship Date 单元格格式：不再使用自定义 d.mm.yyyy，而是使用 Excel 内置 Short Date（格式 ID 14）。",
+    "Require Ship Date 继续写入真正的日期值，可正常排序和计算；Excel 会依据电脑区域设置显示其原生短日期形式。",
+    "仓库邮件正文仍按 4.09.2026 形式显示，Req. Ship Date 仍默认取下单日期后的下一个工作日。",
+    "已增加内置格式 ID 检查并通过完整作业流程回归；本次更新不包含数据库、图片、上传文件或各电脑本地 Packing List 模板。"
   ]
 }
